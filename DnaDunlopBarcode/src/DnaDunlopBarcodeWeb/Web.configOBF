@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+
+    <!--<section name="oracle.manageddataaccess.client" type="OracleInternal.Common.ODPMSectionHandler, Oracle.ManagedDataAccess, Version=4.112.3.50, Culture=neutral, PublicKeyToken=89b483f429c47342" />-->
+
+  </configSections>
+  <appSettings>
+    <add key="webpages:Version" value="2.0.0.0" />
+    <add key="webpages:Enabled" value="false" />
+    <add key="PreserveLoginUrl" value="true" />
+    <add key="ClientValidationEnabled" value="true" />
+    <add key="UnobtrusiveJavaScriptEnabled" value="true" />
+  </appSettings>
+  <system.web>
+    <compilation debug="true" targetFramework="4.5">
+      <assemblies>
+        <add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      </assemblies>
+    </compilation>
+    <httpRuntime targetFramework="4.5" />
+    <authentication mode="Windows" />
+    <authorization>
+      <deny users="?" />
+    </authorization>
+    <pages>
+      <namespaces>
+        <add namespace="System.Web.Helpers" />
+        <add namespace="System.Web.Mvc" />
+        <add namespace="System.Web.Mvc.Ajax" />
+        <add namespace="System.Web.Mvc.Html" />
+        <add namespace="System.Web.Optimization" />
+        <add namespace="System.Web.Routing" />
+        <add namespace="System.Web.WebPages" />
+      </namespaces>
+    </pages>
+  </system.web>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false" />
+    <handlers>
+      <remove name="ExtensionlessUrlHandler-ISAPI-4.0_32bit" />
+      <remove name="ExtensionlessUrlHandler-ISAPI-4.0_64bit" />
+      <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+      <add name="ExtensionlessUrlHandler-ISAPI-4.0_32bit" path="*." verb="GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness32" responseBufferLimit="0" />
+      <add name="ExtensionlessUrlHandler-ISAPI-4.0_64bit" path="*." verb="GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_isapi.dll" preCondition="classicMode,runtimeVersionv4.0,bitness64" responseBufferLimit="0" />
+      <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="GET,HEAD,POST,DEBUG,PUT,DELETE,PATCH,OPTIONS" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    </handlers>
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Helpers" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-2.0.0.0" newVersion="2.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-4.0.0.0" newVersion="4.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.WebPages" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-2.0.0.0" newVersion="2.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="v11.0" />
+      </parameters>
+    </defaultConnectionFactory>
+  </entityFramework>
+
+
+  <system.data>
+    <!--<DbProviderFactories>
+      -->
+    <!-- Remove in case this is already defined in machine.config -->
+    <!--
+      <remove invariant="Oracle.ManagedDataAccess.Client" />
+      <add name="ODP.NET, Managed Driver" invariant="Oracle.ManagedDataAccess.Client" description="Oracle Data Provider for .NET, Managed Driver" type="Oracle.ManagedDataAccess.Client.OracleClientFactory, Oracle.ManagedDataAccess, Version=4.112.3.50, Culture=neutral, PublicKeyToken=89b483f429c47342" />
+    </DbProviderFactories>-->
+  </system.data>
+
+  <!--<oracle.manageddataaccess.client>
+    <version number="*">
+      <settings>
+        -->
+  <!-- Set this path if you are using TNS aliases as connection strings (not recommended) -->
+  <!--
+        -->
+  <!-- Instead you can use "SERVER_NAME:PORT/SERVICE_NAME" as your data source -->
+  <!--
+        <setting name="TNS_ADMIN" value="C:\oracle" />
+      </settings>
+      <edmMappings>
+        <edmMapping dataType="number">
+          <add name="bool" precision="1" />
+          <add name="byte" precision="2" />
+          <add name="int16" precision="5" />
+        </edmMapping>
+      </edmMappings>
+    </version>
+  </oracle.manageddataaccess.client>-->
+
+
+  <connectionStrings>
+    <add name="Entities"
+         connectionString="metadata=res://*/Models.DnaDunlopBarcode.csdl|res://*/Models.DnaDunlopBarcode.ssdl|res://*/Models.DnaDunlopBarcode.msl;provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;data source=SOME_IP:SOME_PORT/SOME_SID;password=SOME_PASSWORD;persist security info=True;user id=SOME_USER_ID&quot;"
+         providerName="System.Data.EntityClient" />
+  </connectionStrings>
+
+</configuration>
