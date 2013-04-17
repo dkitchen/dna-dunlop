@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="DunlopBarcode.Web.ExcelExport" Codebehind="ExcelExport.ascx.cs" %>
+<asp:Button ID="ExcelButton" runat="server" Text="Excel Export" OnClick="ExcelButton_Click" />

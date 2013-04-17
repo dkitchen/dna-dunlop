@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnaDunlopBarcodeWeb", "DnaDunlopBarcodeWeb\DnaDunlopBarcodeWeb.csproj", "{9EB7EBC5-53CD-4763-832D-BF94C8004681}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnaDunlopBarcode.Tests", "DnaDunlopBarcode.Tests\DnaDunlopBarcode.Tests.csproj", "{A4690BB5-1B76-48D6-BC5E-F73CCA409431}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EB7EBC5-53CD-4763-832D-BF94C8004681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB7EBC5-53CD-4763-832D-BF94C8004681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EB7EBC5-53CD-4763-832D-BF94C8004681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EB7EBC5-53CD-4763-832D-BF94C8004681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4690BB5-1B76-48D6-BC5E-F73CCA409431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4690BB5-1B76-48D6-BC5E-F73CCA409431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4690BB5-1B76-48D6-BC5E-F73CCA409431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4690BB5-1B76-48D6-BC5E-F73CCA409431}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

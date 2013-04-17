@@ -1,0 +1,111 @@
+﻿@model IEnumerable<DnaDunlopBarcodeWeb.ViewModels.DepartmentLogViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EventName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MachineName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartSerialNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OperatorSerialNumber)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.DataName1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataValue1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataName2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataValue2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataName3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataValue3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataName4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataValue4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataName5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataValue5)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MachineName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartSerialNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OperatorSerialNumber)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.DataName1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataValue1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataName2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataValue2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataName3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataValue3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataName4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataValue4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataName5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataValue5)
+        </td>*@
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |*@
+            @Html.ActionLink("Details", "Details", new { id = item.Id })
+            @*@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+        </td>
+    </tr>
+}
+
+</table>

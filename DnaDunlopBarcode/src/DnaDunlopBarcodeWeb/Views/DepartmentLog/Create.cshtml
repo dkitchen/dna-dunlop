@@ -1,0 +1,140 @@
+﻿@model DnaDunlopBarcodeWeb.ViewModels.DepartmentLogViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>CreateDepartmentLogViewModel</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EventName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EventName)
+            @Html.ValidationMessageFor(model => model.EventName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MachineName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MachineName)
+            @Html.ValidationMessageFor(model => model.MachineName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PartSerialNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PartSerialNumber)
+            @Html.ValidationMessageFor(model => model.PartSerialNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OperatorSerialNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.OperatorSerialNumber)
+            @Html.ValidationMessageFor(model => model.OperatorSerialNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataName1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataName1)
+            @Html.ValidationMessageFor(model => model.DataName1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataValue1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataValue1)
+            @Html.ValidationMessageFor(model => model.DataValue1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataName2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataName2)
+            @Html.ValidationMessageFor(model => model.DataName2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataValue2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataValue2)
+            @Html.ValidationMessageFor(model => model.DataValue2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataName3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataName3)
+            @Html.ValidationMessageFor(model => model.DataName3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataValue3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataValue3)
+            @Html.ValidationMessageFor(model => model.DataValue3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataName4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataName4)
+            @Html.ValidationMessageFor(model => model.DataName4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataValue4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataValue4)
+            @Html.ValidationMessageFor(model => model.DataValue4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataName5)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataName5)
+            @Html.ValidationMessageFor(model => model.DataName5)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DataValue5)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DataValue5)
+            @Html.ValidationMessageFor(model => model.DataValue5)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
