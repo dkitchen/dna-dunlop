@@ -32,7 +32,7 @@ namespace DnaDunlopBarcodeWeb.Models
         public DbSet<DEFECT_EXPORT> DEFECT_EXPORT { get; set; }
         public DbSet<DELAY_CODES> DELAY_CODES { get; set; }
         public DbSet<DEPARTMENT> DEPARTMENTs { get; set; }
-        public DbSet<DEPARTMENT_LOG> DEPARTMENT_LOG { get; set; }
+        public DbSet<DepartmentLog> DepartmentLogs { get; set; }
         public DbSet<EVENT> EVENTs { get; set; }
         public DbSet<EVENT_CARD_LOG> EVENT_CARD_LOG { get; set; }
         public DbSet<EVENT_DATA> EVENT_DATA { get; set; }
@@ -40,7 +40,7 @@ namespace DnaDunlopBarcodeWeb.Models
         public DbSet<EVENT_LOG_DATA> EVENT_LOG_DATA { get; set; }
         public DbSet<EVENT_LOG_SHIFT> EVENT_LOG_SHIFT { get; set; }
         public DbSet<GOODTIRE_LOG> GOODTIRE_LOG { get; set; }
-        public DbSet<GREEN_TIRE> GREEN_TIRE { get; set; }
+        public DbSet<GreenTire> GreenTires { get; set; }
         public DbSet<GTI_EXPORT_BUILT> GTI_EXPORT_BUILT { get; set; }
         public DbSet<GTI_EXPORT_CURED> GTI_EXPORT_CURED { get; set; }
         public DbSet<MACHINE> MACHINEs { get; set; }

@@ -6,6 +6,8 @@
 
 <h2>Create</h2>
 
+<div class="message">@Model.Message</div>
+
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
@@ -14,115 +16,115 @@
         <legend>CreateDepartmentLogViewModel</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.EventName)
+            @Html.LabelFor(model => model.SelectedDepartmentLog.EventName)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.EventName)
-            @Html.ValidationMessageFor(model => model.EventName)
+            @Html.EditorFor(model => model.SelectedDepartmentLog.EventName)
+            @Html.ValidationMessageFor(model => model.SelectedDepartmentLog.EventName)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.MachineName)
+            @Html.LabelFor(model => model.SelectedDepartmentLog.MachineName)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.MachineName)
-            @Html.ValidationMessageFor(model => model.MachineName)
+            @Html.EditorFor(model => model.SelectedDepartmentLog.MachineName)
+            @Html.ValidationMessageFor(model => model.SelectedDepartmentLog.MachineName)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.PartSerialNumber)
+            @Html.LabelFor(model => model.SelectedDepartmentLog.PartSerialNumber)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.PartSerialNumber)
-            @Html.ValidationMessageFor(model => model.PartSerialNumber)
+            @Html.EditorFor(model => model.SelectedDepartmentLog.PartSerialNumber)
+            @Html.ValidationMessageFor(model => model.SelectedDepartmentLog.PartSerialNumber)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.OperatorSerialNumber)
+            @Html.LabelFor(model => model.SelectedDepartmentLog.OperatorSerialNumber)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.OperatorSerialNumber)
-            @Html.ValidationMessageFor(model => model.OperatorSerialNumber)
+            @Html.EditorFor(model => model.SelectedDepartmentLog.OperatorSerialNumber)
+            @Html.ValidationMessageFor(model => model.SelectedDepartmentLog.OperatorSerialNumber)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DataName1)
+            @Html.LabelFor(model => model.SelectedDepartmentLog.DataName1)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DataName1)
-            @Html.ValidationMessageFor(model => model.DataName1)
+            @Html.EditorFor(model => model.SelectedDepartmentLog.DataName1)
+            @Html.ValidationMessageFor(model => model.SelectedDepartmentLog.DataName1)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DataValue1)
+            @Html.LabelFor(model => model.SelectedDepartmentLog.DataValue1)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DataValue1)
-            @Html.ValidationMessageFor(model => model.DataValue1)
+            @Html.EditorFor(model => model.SelectedDepartmentLog.DataValue1)
+            @Html.ValidationMessageFor(model => model.SelectedDepartmentLog.DataValue1)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DataName2)
+            @Html.LabelFor(model => model.SelectedDepartmentLog.DataName2)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DataName2)
-            @Html.ValidationMessageFor(model => model.DataName2)
+            @Html.EditorFor(model => model.SelectedDepartmentLog.DataName2)
+            @Html.ValidationMessageFor(model => model.SelectedDepartmentLog.DataName2)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DataValue2)
+            @Html.LabelFor(model => model.SelectedDepartmentLog.DataValue2)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DataValue2)
-            @Html.ValidationMessageFor(model => model.DataValue2)
+            @Html.EditorFor(model => model.SelectedDepartmentLog.DataValue2)
+            @Html.ValidationMessageFor(model => model.SelectedDepartmentLog.DataValue2)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DataName3)
+            @Html.LabelFor(model => model.SelectedDepartmentLog.DataName3)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DataName3)
-            @Html.ValidationMessageFor(model => model.DataName3)
+            @Html.EditorFor(model => model.SelectedDepartmentLog.DataName3)
+            @Html.ValidationMessageFor(model => model.SelectedDepartmentLog.DataName3)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DataValue3)
+            @Html.LabelFor(model => model.SelectedDepartmentLog.DataValue3)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DataValue3)
-            @Html.ValidationMessageFor(model => model.DataValue3)
+            @Html.EditorFor(model => model.SelectedDepartmentLog.DataValue3)
+            @Html.ValidationMessageFor(model => model.SelectedDepartmentLog.DataValue3)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DataName4)
+            @Html.LabelFor(model => model.SelectedDepartmentLog.DataName4)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DataName4)
-            @Html.ValidationMessageFor(model => model.DataName4)
+            @Html.EditorFor(model => model.SelectedDepartmentLog.DataName4)
+            @Html.ValidationMessageFor(model => model.SelectedDepartmentLog.DataName4)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DataValue4)
+            @Html.LabelFor(model => model.SelectedDepartmentLog.DataValue4)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DataValue4)
-            @Html.ValidationMessageFor(model => model.DataValue4)
+            @Html.EditorFor(model => model.SelectedDepartmentLog.DataValue4)
+            @Html.ValidationMessageFor(model => model.SelectedDepartmentLog.DataValue4)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DataName5)
+            @Html.LabelFor(model => model.SelectedDepartmentLog.DataName5)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DataName5)
-            @Html.ValidationMessageFor(model => model.DataName5)
+            @Html.EditorFor(model => model.SelectedDepartmentLog.DataName5)
+            @Html.ValidationMessageFor(model => model.SelectedDepartmentLog.DataName5)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DataValue5)
+            @Html.LabelFor(model => model.SelectedDepartmentLog.DataValue5)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DataValue5)
-            @Html.ValidationMessageFor(model => model.DataValue5)
+            @Html.EditorFor(model => model.SelectedDepartmentLog.DataValue5)
+            @Html.ValidationMessageFor(model => model.SelectedDepartmentLog.DataValue5)
         </div>
 
         <p>

@@ -5,7 +5,8 @@ using System.Web;
 
 namespace DnaDunlopBarcodeWeb.ViewModels
 {
-    public class CreatePartSerialNumberChangeLogViewModel
+    public class PartSerialNumberChangeViewModel
     {
+
     }
 }

@@ -1,0 +1,40 @@
+﻿@model DnaDunlopBarcodeWeb.Models.GreenTire
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>GreenTire</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GreenTireNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GreenTireNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SKU)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SKU)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TireCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TireCode)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

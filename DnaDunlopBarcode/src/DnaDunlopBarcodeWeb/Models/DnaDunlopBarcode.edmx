@@ -2108,7 +2108,7 @@
           <EntitySet Name="DEFECT_EXPORT" EntityType="Model.DEFECT_EXPORT" />
           <EntitySet Name="DELAY_CODES" EntityType="Model.DELAY_CODES" />
           <EntitySet Name="DEPARTMENTs" EntityType="Model.DEPARTMENT" />
-          <EntitySet Name="DEPARTMENT_LOG" EntityType="Model.DEPARTMENT_LOG" />
+          <EntitySet Name="DepartmentLogs" EntityType="Model.DepartmentLog" />
           <EntitySet Name="EVENTs" EntityType="Model.EVENT" />
           <EntitySet Name="EVENT_CARD_LOG" EntityType="Model.EVENT_CARD_LOG" />
           <EntitySet Name="EVENT_DATA" EntityType="Model.EVENT_DATA" />
@@ -2116,7 +2116,7 @@
           <EntitySet Name="EVENT_LOG_DATA" EntityType="Model.EVENT_LOG_DATA" />
           <EntitySet Name="EVENT_LOG_SHIFT" EntityType="Model.EVENT_LOG_SHIFT" />
           <EntitySet Name="GOODTIRE_LOG" EntityType="Model.GOODTIRE_LOG" />
-          <EntitySet Name="GREEN_TIRE" EntityType="Model.GREEN_TIRE" />
+          <EntitySet Name="GreenTires" EntityType="Model.GreenTire" />
           <EntitySet Name="GTI_EXPORT_BUILT" EntityType="Model.GTI_EXPORT_BUILT" />
           <EntitySet Name="GTI_EXPORT_CURED" EntityType="Model.GTI_EXPORT_CURED" />
           <EntitySet Name="MACHINEs" EntityType="Model.MACHINE" />
@@ -2432,56 +2432,56 @@
           <Property Name="DESCRIPTION" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
           <Property Name="DEPT_NUMBER" Type="Decimal" Precision="38" Scale="0" />
         </EntityType>
-        <EntityType Name="DEPARTMENT_LOG">
+        <EntityType Name="DepartmentLog">
           <Key>
-            <PropertyRef Name="DEPARTMENT_LOG_ID" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="DEPARTMENT_LOG_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
-          <Property Name="CREATED" Type="DateTime" Nullable="false" />
-          <Property Name="EVENT_NAME" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="MACHINE_NAME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="PART_SERIAL_NUMBER" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
-          <Property Name="OPERATOR_SERIAL_NUMBER" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_NAME_1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_1" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_2" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_3" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_4" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_4" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_5" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_5" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_6" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_6" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_7" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_7" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_8" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_8" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_9" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_9" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_10" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_10" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_11" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_11" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_12" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_12" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_13" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_13" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_14" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_14" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_15" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_15" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_16" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_16" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_17" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_17" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_18" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_18" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_19" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_19" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="DATA_NAME_20" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DATA_VALUE_20" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+          <Property Name="EventName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MachineName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PartSerialNumber" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="OperatorSerialNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataName1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue1" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue2" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue3" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName4" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue4" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName5" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue5" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName6" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue6" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName7" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue7" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName8" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue8" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName9" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue9" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName10" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue10" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName11" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue11" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName12" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue12" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName13" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue13" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName14" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue14" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName15" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue15" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName16" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue16" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName17" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue17" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName18" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue18" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName19" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue19" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DataName20" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataValue20" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="EVENT">
           <Key>
@@ -2560,14 +2560,14 @@
           <Property Name="MACHINE_ID" Type="Decimal" Precision="38" Scale="0" />
           <Property Name="PART_ID" Type="Decimal" Precision="38" Scale="0" />
         </EntityType>
-        <EntityType Name="GREEN_TIRE">
+        <EntityType Name="GreenTire">
           <Key>
-            <PropertyRef Name="GREEN_TIRE_ID" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="GREEN_TIRE_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
-          <Property Name="GREEN_TIRE_NUMBER" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="GreenTireNumber" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
           <Property Name="SKU" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
-          <Property Name="TIRE_CODE" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="TireCode" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
         </EntityType>
         <EntityType Name="GTI_EXPORT_BUILT">
           <Key>
@@ -3421,55 +3421,55 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="DEPARTMENT_LOG">
-            <EntityTypeMapping TypeName="Model.DEPARTMENT_LOG">
+          <EntitySetMapping Name="DepartmentLogs">
+            <EntityTypeMapping TypeName="Model.DepartmentLog">
               <MappingFragment StoreEntitySet="DEPARTMENT_LOG">
-                <ScalarProperty Name="DEPARTMENT_LOG_ID" ColumnName="DEPARTMENT_LOG_ID" />
-                <ScalarProperty Name="CREATED" ColumnName="CREATED" />
-                <ScalarProperty Name="EVENT_NAME" ColumnName="EVENT_NAME" />
-                <ScalarProperty Name="MACHINE_NAME" ColumnName="MACHINE_NAME" />
-                <ScalarProperty Name="PART_SERIAL_NUMBER" ColumnName="PART_SERIAL_NUMBER" />
-                <ScalarProperty Name="OPERATOR_SERIAL_NUMBER" ColumnName="OPERATOR_SERIAL_NUMBER" />
-                <ScalarProperty Name="DATA_NAME_1" ColumnName="DATA_NAME_1" />
-                <ScalarProperty Name="DATA_VALUE_1" ColumnName="DATA_VALUE_1" />
-                <ScalarProperty Name="DATA_NAME_2" ColumnName="DATA_NAME_2" />
-                <ScalarProperty Name="DATA_VALUE_2" ColumnName="DATA_VALUE_2" />
-                <ScalarProperty Name="DATA_NAME_3" ColumnName="DATA_NAME_3" />
-                <ScalarProperty Name="DATA_VALUE_3" ColumnName="DATA_VALUE_3" />
-                <ScalarProperty Name="DATA_NAME_4" ColumnName="DATA_NAME_4" />
-                <ScalarProperty Name="DATA_VALUE_4" ColumnName="DATA_VALUE_4" />
-                <ScalarProperty Name="DATA_NAME_5" ColumnName="DATA_NAME_5" />
-                <ScalarProperty Name="DATA_VALUE_5" ColumnName="DATA_VALUE_5" />
-                <ScalarProperty Name="DATA_NAME_6" ColumnName="DATA_NAME_6" />
-                <ScalarProperty Name="DATA_VALUE_6" ColumnName="DATA_VALUE_6" />
-                <ScalarProperty Name="DATA_NAME_7" ColumnName="DATA_NAME_7" />
-                <ScalarProperty Name="DATA_VALUE_7" ColumnName="DATA_VALUE_7" />
-                <ScalarProperty Name="DATA_NAME_8" ColumnName="DATA_NAME_8" />
-                <ScalarProperty Name="DATA_VALUE_8" ColumnName="DATA_VALUE_8" />
-                <ScalarProperty Name="DATA_NAME_9" ColumnName="DATA_NAME_9" />
-                <ScalarProperty Name="DATA_VALUE_9" ColumnName="DATA_VALUE_9" />
-                <ScalarProperty Name="DATA_NAME_10" ColumnName="DATA_NAME_10" />
-                <ScalarProperty Name="DATA_VALUE_10" ColumnName="DATA_VALUE_10" />
-                <ScalarProperty Name="DATA_NAME_11" ColumnName="DATA_NAME_11" />
-                <ScalarProperty Name="DATA_VALUE_11" ColumnName="DATA_VALUE_11" />
-                <ScalarProperty Name="DATA_NAME_12" ColumnName="DATA_NAME_12" />
-                <ScalarProperty Name="DATA_VALUE_12" ColumnName="DATA_VALUE_12" />
-                <ScalarProperty Name="DATA_NAME_13" ColumnName="DATA_NAME_13" />
-                <ScalarProperty Name="DATA_VALUE_13" ColumnName="DATA_VALUE_13" />
-                <ScalarProperty Name="DATA_NAME_14" ColumnName="DATA_NAME_14" />
-                <ScalarProperty Name="DATA_VALUE_14" ColumnName="DATA_VALUE_14" />
-                <ScalarProperty Name="DATA_NAME_15" ColumnName="DATA_NAME_15" />
-                <ScalarProperty Name="DATA_VALUE_15" ColumnName="DATA_VALUE_15" />
-                <ScalarProperty Name="DATA_NAME_16" ColumnName="DATA_NAME_16" />
-                <ScalarProperty Name="DATA_VALUE_16" ColumnName="DATA_VALUE_16" />
-                <ScalarProperty Name="DATA_NAME_17" ColumnName="DATA_NAME_17" />
-                <ScalarProperty Name="DATA_VALUE_17" ColumnName="DATA_VALUE_17" />
-                <ScalarProperty Name="DATA_NAME_18" ColumnName="DATA_NAME_18" />
-                <ScalarProperty Name="DATA_VALUE_18" ColumnName="DATA_VALUE_18" />
-                <ScalarProperty Name="DATA_NAME_19" ColumnName="DATA_NAME_19" />
-                <ScalarProperty Name="DATA_VALUE_19" ColumnName="DATA_VALUE_19" />
-                <ScalarProperty Name="DATA_NAME_20" ColumnName="DATA_NAME_20" />
-                <ScalarProperty Name="DATA_VALUE_20" ColumnName="DATA_VALUE_20" />
+                <ScalarProperty Name="Id" ColumnName="DEPARTMENT_LOG_ID" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CREATED" />
+                <ScalarProperty Name="EventName" ColumnName="EVENT_NAME" />
+                <ScalarProperty Name="MachineName" ColumnName="MACHINE_NAME" />
+                <ScalarProperty Name="PartSerialNumber" ColumnName="PART_SERIAL_NUMBER" />
+                <ScalarProperty Name="OperatorSerialNumber" ColumnName="OPERATOR_SERIAL_NUMBER" />
+                <ScalarProperty Name="DataName1" ColumnName="DATA_NAME_1" />
+                <ScalarProperty Name="DataValue1" ColumnName="DATA_VALUE_1" />
+                <ScalarProperty Name="DataName2" ColumnName="DATA_NAME_2" />
+                <ScalarProperty Name="DataValue2" ColumnName="DATA_VALUE_2" />
+                <ScalarProperty Name="DataName3" ColumnName="DATA_NAME_3" />
+                <ScalarProperty Name="DataValue3" ColumnName="DATA_VALUE_3" />
+                <ScalarProperty Name="DataName4" ColumnName="DATA_NAME_4" />
+                <ScalarProperty Name="DataValue4" ColumnName="DATA_VALUE_4" />
+                <ScalarProperty Name="DataName5" ColumnName="DATA_NAME_5" />
+                <ScalarProperty Name="DataValue5" ColumnName="DATA_VALUE_5" />
+                <ScalarProperty Name="DataName6" ColumnName="DATA_NAME_6" />
+                <ScalarProperty Name="DataValue6" ColumnName="DATA_VALUE_6" />
+                <ScalarProperty Name="DataName7" ColumnName="DATA_NAME_7" />
+                <ScalarProperty Name="DataValue7" ColumnName="DATA_VALUE_7" />
+                <ScalarProperty Name="DataName8" ColumnName="DATA_NAME_8" />
+                <ScalarProperty Name="DataValue8" ColumnName="DATA_VALUE_8" />
+                <ScalarProperty Name="DataName9" ColumnName="DATA_NAME_9" />
+                <ScalarProperty Name="DataValue9" ColumnName="DATA_VALUE_9" />
+                <ScalarProperty Name="DataName10" ColumnName="DATA_NAME_10" />
+                <ScalarProperty Name="DataValue10" ColumnName="DATA_VALUE_10" />
+                <ScalarProperty Name="DataName11" ColumnName="DATA_NAME_11" />
+                <ScalarProperty Name="DataValue11" ColumnName="DATA_VALUE_11" />
+                <ScalarProperty Name="DataName12" ColumnName="DATA_NAME_12" />
+                <ScalarProperty Name="DataValue12" ColumnName="DATA_VALUE_12" />
+                <ScalarProperty Name="DataName13" ColumnName="DATA_NAME_13" />
+                <ScalarProperty Name="DataValue13" ColumnName="DATA_VALUE_13" />
+                <ScalarProperty Name="DataName14" ColumnName="DATA_NAME_14" />
+                <ScalarProperty Name="DataValue14" ColumnName="DATA_VALUE_14" />
+                <ScalarProperty Name="DataName15" ColumnName="DATA_NAME_15" />
+                <ScalarProperty Name="DataValue15" ColumnName="DATA_VALUE_15" />
+                <ScalarProperty Name="DataName16" ColumnName="DATA_NAME_16" />
+                <ScalarProperty Name="DataValue16" ColumnName="DATA_VALUE_16" />
+                <ScalarProperty Name="DataName17" ColumnName="DATA_NAME_17" />
+                <ScalarProperty Name="DataValue17" ColumnName="DATA_VALUE_17" />
+                <ScalarProperty Name="DataName18" ColumnName="DATA_NAME_18" />
+                <ScalarProperty Name="DataValue18" ColumnName="DATA_VALUE_18" />
+                <ScalarProperty Name="DataName19" ColumnName="DATA_NAME_19" />
+                <ScalarProperty Name="DataValue19" ColumnName="DATA_VALUE_19" />
+                <ScalarProperty Name="DataName20" ColumnName="DATA_NAME_20" />
+                <ScalarProperty Name="DataValue20" ColumnName="DATA_VALUE_20" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -3552,13 +3552,13 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="GREEN_TIRE">
-            <EntityTypeMapping TypeName="Model.GREEN_TIRE">
+          <EntitySetMapping Name="GreenTires">
+            <EntityTypeMapping TypeName="Model.GreenTire">
               <MappingFragment StoreEntitySet="GREEN_TIRE">
-                <ScalarProperty Name="GREEN_TIRE_ID" ColumnName="GREEN_TIRE_ID" />
-                <ScalarProperty Name="GREEN_TIRE_NUMBER" ColumnName="GREEN_TIRE_NUMBER" />
+                <ScalarProperty Name="Id" ColumnName="GREEN_TIRE_ID" />
+                <ScalarProperty Name="GreenTireNumber" ColumnName="GREEN_TIRE_NUMBER" />
                 <ScalarProperty Name="SKU" ColumnName="SKU" />
-                <ScalarProperty Name="TIRE_CODE" ColumnName="TIRE_CODE" />
+                <ScalarProperty Name="TireCode" ColumnName="TIRE_CODE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

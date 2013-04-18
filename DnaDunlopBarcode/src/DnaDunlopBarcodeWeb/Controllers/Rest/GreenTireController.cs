@@ -12,46 +12,44 @@ using DnaDunlopBarcodeWeb.Models;
 
 namespace DnaDunlopBarcodeWeb.Controllers.Rest
 {
-    public class DepartmentLogController : ApiController
+    public class GreenTireController : ApiController
     {
         private Entities db = new Entities();
 
-        // GET api/DepartmentLog
-        public IEnumerable<DepartmentLog> Get()
+        // GET api/GreenTire
+        public IEnumerable<GreenTire> GetGreenTires()
         {
-            //only get the last 100 items
-            return db.DepartmentLogs
-                .OrderByDescending(i => i.Id)
-                .Take(100)
+            return db.GreenTires
+                .OrderBy(i=>i.GreenTireNumber)
                 .AsEnumerable();
         }
 
-        // GET api/DepartmentLog/5
-        public DepartmentLog Get(decimal id)
+        // GET api/GreenTire/5
+        public GreenTire GetGreenTire(decimal id)
         {
-            var log = db.DepartmentLogs.Find(id);
-            if (log == null)
+            GreenTire greentire = db.GreenTires.Find(id);
+            if (greentire == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
             }
 
-            return log;
+            return greentire;
         }
 
-        // PUT api/DepartmentLog/5
-        public HttpResponseMessage Put(decimal id, DepartmentLog log)
+        // PUT api/GreenTire/5
+        public HttpResponseMessage PutGreenTire(decimal id, GreenTire greentire)
         {
             if (!ModelState.IsValid)
             {
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
             }
 
-            if (id != log.Id)
+            if (id != greentire.Id)
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
 
-            db.Entry(log).State = EntityState.Modified;
+            db.Entry(greentire).State = EntityState.Modified;
 
             try
             {
@@ -65,21 +63,16 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
-        // POST api/DepartmentLog
-        public HttpResponseMessage Post(DepartmentLog log)
+        // POST api/GreenTire
+        public HttpResponseMessage PostGreenTire(GreenTire greentire)
         {
             if (ModelState.IsValid)
             {
-                //set date if not set already
-                if (log.CreatedOn < DateTime.Now.AddDays(-1))
-                {
-                    log.CreatedOn = DateTime.Now;
-                }
-                db.DepartmentLogs.Add(log);
+                db.GreenTires.Add(greentire);
                 db.SaveChanges();
 
-                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, log);
-                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = log.Id }));
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, greentire);
+                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = greentire.Id }));
                 return response;
             }
             else
@@ -88,16 +81,16 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
             }
         }
 
-        // DELETE api/DepartmentLog/5
-        public HttpResponseMessage Delete(decimal id)
+        // DELETE api/GreenTire/5
+        public HttpResponseMessage DeleteGreenTire(decimal id)
         {
-            var log = db.DepartmentLogs.Find(id);
-            if (log == null)
+            GreenTire greentire = db.GreenTires.Find(id);
+            if (greentire == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
 
-            db.DepartmentLogs.Remove(log);
+            db.GreenTires.Remove(greentire);
 
             try
             {
@@ -108,7 +101,7 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
                 return Request.CreateErrorResponse(HttpStatusCode.NotFound, ex);
             }
 
-            return Request.CreateResponse(HttpStatusCode.OK, log);
+            return Request.CreateResponse(HttpStatusCode.OK, greentire);
         }
 
         protected override void Dispose(bool disposing)

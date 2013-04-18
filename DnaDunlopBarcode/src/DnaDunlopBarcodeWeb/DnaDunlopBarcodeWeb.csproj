@@ -130,8 +130,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DepartmentLogController.cs" />
+    <Compile Include="Controllers\GreenTireController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Rest\DepartmentLogController.cs" />
+    <Compile Include="Controllers\Rest\GreenTireController.cs" />
     <Compile Include="Models\CURING_PIVOT_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
     </Compile>
@@ -150,7 +152,7 @@
     <Compile Include="Models\DEPARTMENT.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DEPARTMENT_LOG.cs">
+    <Compile Include="Models\DepartmentLog.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DnaDunlopBarcode.Context.cs">
@@ -224,7 +226,7 @@
     <Compile Include="Models\GOODTIRE_LOG.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\GREEN_TIRE.cs">
+    <Compile Include="Models\GreenTire.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GTI_BUILT_VIEW.cs">
@@ -334,8 +336,8 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\DepartmentLogViewModel.cs" />
-    <Compile Include="ViewModels\CreatePartGreenTireChangeLogViewModel.cs" />
-    <Compile Include="ViewModels\CreatePartSerialNumberChangeLogViewModel.cs" />
+    <Compile Include="ViewModels\PartGreenTireChangeViewModel.cs" />
+    <Compile Include="ViewModels\PartSerialNumberChangeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -411,6 +413,21 @@
       <DependentUpon>DnaDunlopBarcode.edmx</DependentUpon>
       <LastGenOutput>DnaDunlopBarcode.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\DepartmentLog\CreatePartGreenTireChange.cshtml" />
+    <Content Include="Views\GreenTire\Index.cshtml" />
+    <Content Include="Views\GreenTire\Details.cshtml" />
+    <Content Include="Views\GreenTire\Create.cshtml" />
+    <Content Include="Views\GreenTire\Edit.cshtml" />
+    <Content Include="Views\GreenTire\Delete.cshtml" />
+    <None Include="Web.configOBF">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.configOBF">
+      <DependentUpon>Web.configOBF</DependentUpon>
+    </None>
+    <None Include="Web.Release.configOBF">
+      <DependentUpon>Web.configOBF</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />

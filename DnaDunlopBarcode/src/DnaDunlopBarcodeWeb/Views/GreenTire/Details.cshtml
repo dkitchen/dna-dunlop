@@ -1,0 +1,36 @@
+﻿@model DnaDunlopBarcodeWeb.Models.GreenTire
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>GreenTire</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GreenTireNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GreenTireNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SKU)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SKU)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TireCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TireCode)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DnaDunlopBarcodeWeb.ViewModels.DepartmentLogViewModel>
+﻿@model DnaDunlopBarcodeWeb.ViewModels.DepartmentLogViewModel
 
 @{
     ViewBag.Title = "Index";
@@ -12,51 +12,51 @@
 <table>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.EventName)
+            @Html.DisplayNameFor(model => model.SelectedDepartmentLog.EventName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MachineName)
+            @Html.DisplayNameFor(model => model.SelectedDepartmentLog.MachineName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PartSerialNumber)
+            @Html.DisplayNameFor(model => model.SelectedDepartmentLog.PartSerialNumber)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.OperatorSerialNumber)
+            @Html.DisplayNameFor(model => model.SelectedDepartmentLog.OperatorSerialNumber)
         </th>
         @*<th>
-            @Html.DisplayNameFor(model => model.DataName1)
+            @Html.DisplayNameFor(model => model.SelectedDepartmentLog.DataName1)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DataValue1)
+            @Html.DisplayNameFor(model => model.SelectedDepartmentLog.DataValue1)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DataName2)
+            @Html.DisplayNameFor(model => model.SelectedDepartmentLog.DataName2)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DataValue2)
+            @Html.DisplayNameFor(model => model.SelectedDepartmentLog.DataValue2)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DataName3)
+            @Html.DisplayNameFor(model => model.SelectedDepartmentLog.DataName3)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DataValue3)
+            @Html.DisplayNameFor(model => model.SelectedDepartmentLog.DataValue3)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DataName4)
+            @Html.DisplayNameFor(model => model.SelectedDepartmentLog.DataName4)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DataValue4)
+            @Html.DisplayNameFor(model => model.SelectedDepartmentLog.DataValue4)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DataName5)
+            @Html.DisplayNameFor(model => model.SelectedDepartmentLog.DataName5)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DataValue5)
+            @Html.DisplayNameFor(model => model.SelectedDepartmentLog.DataValue5)
         </th>*@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model.DepartmentLogs) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.EventName)
