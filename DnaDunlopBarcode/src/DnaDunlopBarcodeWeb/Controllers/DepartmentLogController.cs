@@ -12,6 +12,7 @@ namespace DnaDunlopBarcodeWeb.Controllers
 
         Rest.DepartmentLogController _departmentLogApi = new Rest.DepartmentLogController();
         Rest.GreenTireController _greenTireApi = new Rest.GreenTireController();
+        Rest.PartByGoodyearSerialNumberController _partByGoodyearSerialNumberApi = new Rest.PartByGoodyearSerialNumberController();
 
         public ActionResult Index()
         {
@@ -47,6 +48,7 @@ namespace DnaDunlopBarcodeWeb.Controllers
             {
                 try
                 {
+                    _departmentLogApi.InitializePost();
                     _departmentLogApi.Post(viewModel.SelectedDepartmentLog);
 
                     return RedirectToAction("Index");
@@ -60,62 +62,11 @@ namespace DnaDunlopBarcodeWeb.Controllers
             return View(viewModel);
         }
 
-        //
-        // GET: /DepartmentLog/Edit/5
-
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /DepartmentLog/Edit/5
-
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        //
-        // GET: /DepartmentLog/Delete/5
-
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /DepartmentLog/Delete/5
-
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
         public ActionResult CreatePartGreenTireChange()
         {
             var viewModel = new PartGreenTireChangeViewModel();
-            viewModel.GreenTireSelectList = new SelectList(_greenTireApi.GetGreenTires(), "GreenTireNumber", "GreenTireNumber");
+            viewModel.Message = null;
+            viewModel.GreenTireSelectList = new SelectList(_greenTireApi.GetGreenTires());
             return View(viewModel);
         }
 
@@ -130,17 +81,17 @@ namespace DnaDunlopBarcodeWeb.Controllers
                     //defaults for this kind of event
                     viewModel.DepartmentLog.EventName = "PartGreenTireNumberChange";
                     viewModel.DepartmentLog.MachineName = "Web";
-                    viewModel.DepartmentLog.CreatedOn = DateTime.Now;
-                    //viewModel.DepartmentLog.DataName1 = "OriginalGreenTireNumber";
-                    //do this in sproc???
-                    //viewModel.DepartmentLog.DataValue1 = Get current part and get current gtn
+
+                    //DANGER!! Don't allow a new 15 digit part serial to get assigned here or it will create a 
+                    //  brand new part row
+                    viewModel.DepartmentLog.PartSerialNumber = viewModel.GoodyearSerialNumber;                    
                     viewModel.DepartmentLog.DataName1 = "NewGreenTireNumber";
                     viewModel.DepartmentLog.DataValue1 = viewModel.NewGreenTireNumber;
 
-
+                    _departmentLogApi.InitializePost();
                     _departmentLogApi.Post(viewModel.DepartmentLog);
 
-                    return View();  // RedirectToAction("Index");
+                    return RedirectToAction("Index");
                 }
                 catch (Exception ex)
                 {
@@ -148,7 +99,7 @@ namespace DnaDunlopBarcodeWeb.Controllers
                 }
             }
 
-            viewModel.GreenTireSelectList = new SelectList(_greenTireApi.GetGreenTires(), "GreenTireNumber", "GreenTireNumber");
+            viewModel.GreenTireSelectList = new SelectList(_greenTireApi.GetGreenTires());
             return View(viewModel);
         }
     }

@@ -27,7 +27,7 @@
         <EntityTypeShape EntityType="Model.OPERATOR_IMPORT" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.OPERATOR_IMPORT2" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.OPERATOR_RECONCILE" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.PART" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Part" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.SHIFT" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.SHIFT_DEFINITION" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.TESTINSERTEVENTLOG" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />

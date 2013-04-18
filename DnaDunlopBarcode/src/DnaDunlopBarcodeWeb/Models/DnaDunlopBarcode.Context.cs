@@ -50,7 +50,7 @@ namespace DnaDunlopBarcodeWeb.Models
         public DbSet<OPERATOR_IMPORT> OPERATOR_IMPORT { get; set; }
         public DbSet<OPERATOR_IMPORT2> OPERATOR_IMPORT2 { get; set; }
         public DbSet<OPERATOR_RECONCILE> OPERATOR_RECONCILE { get; set; }
-        public DbSet<PART> PARTs { get; set; }
+        public DbSet<Part> Parts { get; set; }
         public DbSet<SHIFT> SHIFTs { get; set; }
         public DbSet<SHIFT_DEFINITION> SHIFT_DEFINITION { get; set; }
         public DbSet<TESTINSERTEVENTLOG> TESTINSERTEVENTLOGs { get; set; }

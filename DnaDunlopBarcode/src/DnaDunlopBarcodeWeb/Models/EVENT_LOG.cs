@@ -23,7 +23,7 @@ namespace DnaDunlopBarcodeWeb.Models
     
         public virtual EVENT EVENT { get; set; }
         public virtual MACHINE MACHINE { get; set; }
-        public virtual PART PART { get; set; }
+        public virtual Part PART { get; set; }
         public virtual OPERATOR OPERATOR { get; set; }
     }
 }

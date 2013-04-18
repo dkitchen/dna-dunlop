@@ -2126,7 +2126,7 @@
           <EntitySet Name="OPERATOR_IMPORT" EntityType="Model.OPERATOR_IMPORT" />
           <EntitySet Name="OPERATOR_IMPORT2" EntityType="Model.OPERATOR_IMPORT2" />
           <EntitySet Name="OPERATOR_RECONCILE" EntityType="Model.OPERATOR_RECONCILE" />
-          <EntitySet Name="PARTs" EntityType="Model.PART" />
+          <EntitySet Name="Parts" EntityType="Model.Part" />
           <EntitySet Name="SHIFTs" EntityType="Model.SHIFT" />
           <EntitySet Name="SHIFT_DEFINITION" EntityType="Model.SHIFT_DEFINITION" />
           <EntitySet Name="TESTINSERTEVENTLOGs" EntityType="Model.TESTINSERTEVENTLOG" />
@@ -2173,7 +2173,7 @@
             <End Role="EVENT_LOG" EntitySet="EVENT_LOG" />
           </AssociationSet>
           <AssociationSet Name="EVENT_LOG_FK_PART" Association="Model.EVENT_LOG_FK_PART">
-            <End Role="PART" EntitySet="PARTs" />
+            <End Role="PART" EntitySet="Parts" />
             <End Role="EVENT_LOG" EntitySet="EVENT_LOG" />
           </AssociationSet>
           <AssociationSet Name="EVENT_LOG_OPERATOR" Association="Model.EVENT_LOG_OPERATOR">
@@ -2682,16 +2682,16 @@
           <Property Name="OLD_OPERATOR_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
           <Property Name="NEW_OPERATOR_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
         </EntityType>
-        <EntityType Name="PART">
+        <EntityType Name="Part">
           <Key>
-            <PropertyRef Name="PART_ID" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="PART_ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
-          <Property Name="SERIAL_NUMBER" Type="String" Nullable="false" MaxLength="128" Unicode="false" FixedLength="false" />
-          <Property Name="GREEN_TIRE_NUMBER" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="GOODYEAR_SERIAL_NUMBER" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="CREATED" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="EVENT_LOG" Relationship="Model.EVENT_LOG_FK_PART" FromRole="PART" ToRole="EVENT_LOG" />
+          <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="SerialNumber" Type="String" Nullable="false" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="GreenTireNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="GoodyearSerialNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="EventLog" Relationship="Model.EVENT_LOG_FK_PART" FromRole="PART" ToRole="EVENT_LOG" />
         </EntityType>
         <EntityType Name="SHIFT">
           <Key>
@@ -3333,11 +3333,11 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="EVENT_LOG_FK_PART">
-          <End Role="PART" Type="Model.PART" Multiplicity="0..1" />
+          <End Role="PART" Type="Model.Part" Multiplicity="0..1" />
           <End Role="EVENT_LOG" Type="Model.EVENT_LOG" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="PART">
-              <PropertyRef Name="PART_ID" />
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="EVENT_LOG">
               <PropertyRef Name="PART_ID" />
@@ -3680,14 +3680,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PARTs">
-            <EntityTypeMapping TypeName="Model.PART">
+          <EntitySetMapping Name="Parts">
+            <EntityTypeMapping TypeName="Model.Part">
               <MappingFragment StoreEntitySet="PART">
-                <ScalarProperty Name="PART_ID" ColumnName="PART_ID" />
-                <ScalarProperty Name="SERIAL_NUMBER" ColumnName="SERIAL_NUMBER" />
-                <ScalarProperty Name="GREEN_TIRE_NUMBER" ColumnName="GREEN_TIRE_NUMBER" />
-                <ScalarProperty Name="GOODYEAR_SERIAL_NUMBER" ColumnName="GOODYEAR_SERIAL_NUMBER" />
-                <ScalarProperty Name="CREATED" ColumnName="CREATED" />
+                <ScalarProperty Name="Id" ColumnName="PART_ID" />
+                <ScalarProperty Name="SerialNumber" ColumnName="SERIAL_NUMBER" />
+                <ScalarProperty Name="GreenTireNumber" ColumnName="GREEN_TIRE_NUMBER" />
+                <ScalarProperty Name="GoodyearSerialNumber" ColumnName="GOODYEAR_SERIAL_NUMBER" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CREATED" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -134,6 +134,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Rest\DepartmentLogController.cs" />
     <Compile Include="Controllers\Rest\GreenTireController.cs" />
+    <Compile Include="Controllers\Rest\PartByGoodyearSerialNumberController.cs" />
+    <Compile Include="Controllers\Rest\PartController.cs" />
     <Compile Include="Models\CURING_PIVOT_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
     </Compile>
@@ -307,7 +309,7 @@
     <Compile Include="Models\OPERATOR_RECONCILE.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PART.cs">
+    <Compile Include="Models\Part.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PART_BUILD_CURE_VIEW.cs">
@@ -336,6 +338,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\DepartmentLogViewModel.cs" />
+    <Compile Include="ViewModels\Extensions.cs" />
     <Compile Include="ViewModels\PartGreenTireChangeViewModel.cs" />
     <Compile Include="ViewModels\PartSerialNumberChangeViewModel.cs" />
   </ItemGroup>

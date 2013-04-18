@@ -12,46 +12,42 @@ using DnaDunlopBarcodeWeb.Models;
 
 namespace DnaDunlopBarcodeWeb.Controllers.Rest
 {
-    public class GreenTireController : ApiController
+    public class PartController : ApiController
     {
         private Entities db = new Entities();
 
-        // GET api/GreenTire
-        public IEnumerable<string> GetGreenTires()
+        // GET api/Part
+        public IEnumerable<Part> GetParts()
         {
-            return db.GreenTires
-                .Select(i=>i.GreenTireNumber)
-                .Distinct()
-                .OrderBy(i => i)
-                .AsEnumerable();
+            return db.Parts.AsEnumerable();
         }
 
-        // GET api/GreenTire/5
-        public GreenTire GetGreenTire(decimal id)
+        // GET api/Part/5
+        public Part GetPart(decimal id)
         {
-            GreenTire greentire = db.GreenTires.Find(id);
-            if (greentire == null)
+            Part part = db.Parts.Find(id);
+            if (part == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
             }
 
-            return greentire;
+            return part;
         }
 
-        // PUT api/GreenTire/5
-        public HttpResponseMessage PutGreenTire(decimal id, GreenTire greentire)
+        // PUT api/Part/5
+        public HttpResponseMessage PutPart(decimal id, Part part)
         {
             if (!ModelState.IsValid)
             {
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
             }
 
-            if (id != greentire.Id)
+            if (id != part.Id)
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
 
-            db.Entry(greentire).State = EntityState.Modified;
+            db.Entry(part).State = EntityState.Modified;
 
             try
             {
@@ -65,16 +61,16 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
-        // POST api/GreenTire
-        public HttpResponseMessage PostGreenTire(GreenTire greentire)
+        // POST api/Part
+        public HttpResponseMessage PostPart(Part part)
         {
             if (ModelState.IsValid)
             {
-                db.GreenTires.Add(greentire);
+                db.Parts.Add(part);
                 db.SaveChanges();
 
-                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, greentire);
-                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = greentire.Id }));
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, part);
+                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = part.Id }));
                 return response;
             }
             else
@@ -83,16 +79,16 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
             }
         }
 
-        // DELETE api/GreenTire/5
-        public HttpResponseMessage DeleteGreenTire(decimal id)
+        // DELETE api/Part/5
+        public HttpResponseMessage DeletePart(decimal id)
         {
-            GreenTire greentire = db.GreenTires.Find(id);
-            if (greentire == null)
+            Part part = db.Parts.Find(id);
+            if (part == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
 
-            db.GreenTires.Remove(greentire);
+            db.Parts.Remove(part);
 
             try
             {
@@ -103,7 +99,7 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
                 return Request.CreateErrorResponse(HttpStatusCode.NotFound, ex);
             }
 
-            return Request.CreateResponse(HttpStatusCode.OK, greentire);
+            return Request.CreateResponse(HttpStatusCode.OK, part);
         }
 
         protected override void Dispose(bool disposing)

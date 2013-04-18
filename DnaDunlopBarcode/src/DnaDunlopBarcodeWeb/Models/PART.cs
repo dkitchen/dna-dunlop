@@ -12,19 +12,19 @@ namespace DnaDunlopBarcodeWeb.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class PART
+    public partial class Part
     {
-        public PART()
+        public Part()
         {
-            this.EVENT_LOG = new HashSet<EVENT_LOG>();
+            this.EventLog = new HashSet<EVENT_LOG>();
         }
     
-        public decimal PART_ID { get; set; }
-        public string SERIAL_NUMBER { get; set; }
-        public string GREEN_TIRE_NUMBER { get; set; }
-        public string GOODYEAR_SERIAL_NUMBER { get; set; }
-        public System.DateTime CREATED { get; set; }
+        public decimal Id { get; set; }
+        public string SerialNumber { get; set; }
+        public string GreenTireNumber { get; set; }
+        public string GoodyearSerialNumber { get; set; }
+        public System.DateTime CreatedOn { get; set; }
     
-        public virtual ICollection<EVENT_LOG> EVENT_LOG { get; set; }
+        public virtual ICollection<EVENT_LOG> EventLog { get; set; }
     }
 }
