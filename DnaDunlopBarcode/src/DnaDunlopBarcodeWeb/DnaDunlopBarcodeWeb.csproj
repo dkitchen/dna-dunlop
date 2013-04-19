@@ -416,6 +416,12 @@
       <DependentUpon>DnaDunlopBarcode.edmx</DependentUpon>
       <LastGenOutput>DnaDunlopBarcode.cs</LastGenOutput>
     </Content>
+    <Content Include="sql\EVENT_LOG_VEIW_WITH_SHIFT.sql" />
+    <Content Include="sql\HANDLE_GTN_CHANGE.sql" />
+    <Content Include="sql\HANDLE_PSN_CHANGE.sql" />
+    <Content Include="sql\INSERT_EVENT_LOG.sql" />
+    <Content Include="sql\PART.sql" />
+    <Content Include="sql\PART_HISTORY.sql" />
     <Content Include="Views\DepartmentLog\CreatePartGreenTireChange.cshtml" />
     <Content Include="Views\GreenTire\Index.cshtml" />
     <Content Include="Views\GreenTire\Details.cshtml" />
@@ -423,6 +429,7 @@
     <Content Include="Views\GreenTire\Edit.cshtml" />
     <Content Include="Views\GreenTire\Delete.cshtml" />
     <Content Include="Views\DepartmentLog\CreatePartSerialNumberChange.cshtml" />
+    <None Include="Properties\PublishProfiles\dunlop_web.pubxml" />
     <None Include="Web.configOBF">
       <SubType>Designer</SubType>
     </None>
