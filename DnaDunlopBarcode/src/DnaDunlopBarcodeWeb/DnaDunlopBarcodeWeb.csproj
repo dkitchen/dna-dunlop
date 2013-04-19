@@ -17,8 +17,8 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -422,6 +422,7 @@
     <Content Include="Views\GreenTire\Create.cshtml" />
     <Content Include="Views\GreenTire\Edit.cshtml" />
     <Content Include="Views\GreenTire\Delete.cshtml" />
+    <Content Include="Views\DepartmentLog\CreatePartSerialNumberChange.cshtml" />
     <None Include="Web.configOBF">
       <SubType>Designer</SubType>
     </None>

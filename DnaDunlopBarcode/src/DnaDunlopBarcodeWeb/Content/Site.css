@@ -403,7 +403,7 @@ aside {
 fieldset {
     border: none;
     margin: 0;
-    padding: 0;
+    padding: 1em;
 }
 
     fieldset legend {

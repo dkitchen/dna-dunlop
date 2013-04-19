@@ -1,19 +1,20 @@
-﻿@model DnaDunlopBarcodeWeb.ViewModels.PartGreenTireChangeViewModel
+﻿@model DnaDunlopBarcodeWeb.ViewModels.PartSerialNumberChangeViewModel
 
 @{
-    ViewBag.Title = "CreatePartGreenTireChange";
+    ViewBag.Title = "CreatePartSerialNumberChange";
 }
 
-<h2>Change Part Green Tire Number</h2>
+<h2>CreatePartSerialNumberChange</h2>
 
 <div class="message">@Model.Message</div>
+
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Change Green Tire Number</legend>
+        <legend>Change Serial Number</legend>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.OperatorSerialNumber)
@@ -24,21 +25,20 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.GoodyearSerialNumber)
+            @Html.LabelFor(model => model.OldGoodyearSerialNumber)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.GoodyearSerialNumber)
-            @Html.ValidationMessageFor(model => model.GoodyearSerialNumber)
+            @Html.EditorFor(model => model.OldGoodyearSerialNumber)
+            @Html.ValidationMessageFor(model => model.OldGoodyearSerialNumber)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.NewGreenTireNumber)
+            @Html.LabelFor(model => model.NewGoodyearSerialNumber)
         </div>
         <div class="editor-field">
-            @Html.DropDownListFor(model => model.NewGreenTireNumber, Model.GreenTireSelectList, "-- select green tire --") 
-            @Html.ValidationMessageFor(model => model.NewGreenTireNumber)
+            @Html.EditorFor(model => model.NewGoodyearSerialNumber)
+            @Html.ValidationMessageFor(model => model.NewGoodyearSerialNumber)
         </div>
-
 
         <p>
             <input type="submit" value="Create" />
