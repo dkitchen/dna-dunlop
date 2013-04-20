@@ -1,44 +1,43 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+﻿<?xml version="1.0" encoding="utf-8"?><edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="ModelStoreContainer">
-          <EntitySet Name="CURING_SETUP" EntityType="Model.Store.CURING_SETUP" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="DEFECT_EXPORT" EntityType="Model.Store.DEFECT_EXPORT" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="DELAY_CODES" EntityType="Model.Store.DELAY_CODES" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="DEPARTMENT" EntityType="Model.Store.DEPARTMENT" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="DEPARTMENT_LOG" EntityType="Model.Store.DEPARTMENT_LOG" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="EVENT" EntityType="Model.Store.EVENT" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="EVENT_CARD_LOG" EntityType="Model.Store.EVENT_CARD_LOG" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="EVENT_DATA" EntityType="Model.Store.EVENT_DATA" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="EVENT_LOG" EntityType="Model.Store.EVENT_LOG" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="EVENT_LOG_DATA" EntityType="Model.Store.EVENT_LOG_DATA" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="EVENT_LOG_SHIFT" EntityType="Model.Store.EVENT_LOG_SHIFT" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="GOODTIRE_LOG" EntityType="Model.Store.GOODTIRE_LOG" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="GREEN_TIRE" EntityType="Model.Store.GREEN_TIRE" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="GTI_EXPORT_BUILT" EntityType="Model.Store.GTI_EXPORT_BUILT" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="GTI_EXPORT_CURED" EntityType="Model.Store.GTI_EXPORT_CURED" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="MACHINE" EntityType="Model.Store.MACHINE" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="MESSAGE" EntityType="Model.Store.MESSAGE" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="NOTIFICATION_LOG" EntityType="Model.Store.NOTIFICATION_LOG" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="OPERATOR" EntityType="Model.Store.OPERATOR" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="OPERATOR_IMPORT" EntityType="Model.Store.OPERATOR_IMPORT" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="OPERATOR_IMPORT2" EntityType="Model.Store.OPERATOR_IMPORT2" store:Type="Tables" store:Schema="ORACLE" store:Name="OPERATOR_IMPORT2">
+          <EntitySet Name="CURING_SETUP" EntityType="Model.Store.CURING_SETUP" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="DEFECT_EXPORT" EntityType="Model.Store.DEFECT_EXPORT" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="DELAY_CODES" EntityType="Model.Store.DELAY_CODES" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="DEPARTMENT" EntityType="Model.Store.DEPARTMENT" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="DEPARTMENT_LOG" EntityType="Model.Store.DEPARTMENT_LOG" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="EVENT" EntityType="Model.Store.EVENT" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="EVENT_CARD_LOG" EntityType="Model.Store.EVENT_CARD_LOG" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="EVENT_DATA" EntityType="Model.Store.EVENT_DATA" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="EVENT_LOG" EntityType="Model.Store.EVENT_LOG" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="EVENT_LOG_DATA" EntityType="Model.Store.EVENT_LOG_DATA" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="EVENT_LOG_SHIFT" EntityType="Model.Store.EVENT_LOG_SHIFT" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="GOODTIRE_LOG" EntityType="Model.Store.GOODTIRE_LOG" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="GREEN_TIRE" EntityType="Model.Store.GREEN_TIRE" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="GTI_EXPORT_BUILT" EntityType="Model.Store.GTI_EXPORT_BUILT" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="GTI_EXPORT_CURED" EntityType="Model.Store.GTI_EXPORT_CURED" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="MACHINE" EntityType="Model.Store.MACHINE" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="MESSAGE" EntityType="Model.Store.MESSAGE" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="NOTIFICATION_LOG" EntityType="Model.Store.NOTIFICATION_LOG" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="OPERATOR" EntityType="Model.Store.OPERATOR" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="OPERATOR_IMPORT" EntityType="Model.Store.OPERATOR_IMPORT" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="OPERATOR_IMPORT2" EntityType="Model.Store.OPERATOR_IMPORT2" store:Type="Tables" store:Schema="MRT" store:Name="OPERATOR_IMPORT2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "OPERATOR_IMPORT2"."SERIAL_NUMBER" AS "SERIAL_NUMBER", 
       "OPERATOR_IMPORT2"."EMPLOYEE_NUMBER" AS "EMPLOYEE_NUMBER"
       FROM "ORACLE"."OPERATOR_IMPORT2" "OPERATOR_IMPORT2"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="OPERATOR_RECONCILE" EntityType="Model.Store.OPERATOR_RECONCILE" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="PART" EntityType="Model.Store.PART" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="SHIFT" EntityType="Model.Store.SHIFT" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="SHIFT_DEFINITION" EntityType="Model.Store.SHIFT_DEFINITION" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="TESTINSERTEVENTLOG" EntityType="Model.Store.TESTINSERTEVENTLOG" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="UPH_STANDARDS" EntityType="Model.Store.UPH_STANDARDS" store:Type="Tables" Schema="ORACLE" />
-          <EntitySet Name="CURING_PIVOT_VIEW" EntityType="Model.Store.CURING_PIVOT_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="CURING_PIVOT_VIEW">
+          <EntitySet Name="OPERATOR_RECONCILE" EntityType="Model.Store.OPERATOR_RECONCILE" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="PART" EntityType="Model.Store.PART" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SHIFT" EntityType="Model.Store.SHIFT" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SHIFT_DEFINITION" EntityType="Model.Store.SHIFT_DEFINITION" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="TESTINSERTEVENTLOG" EntityType="Model.Store.TESTINSERTEVENTLOG" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="UPH_STANDARDS" EntityType="Model.Store.UPH_STANDARDS" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="CURING_PIVOT_VIEW" EntityType="Model.Store.CURING_PIVOT_VIEW" store:Type="Views" store:Schema="MRT" store:Name="CURING_PIVOT_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "CURING_PIVOT_VIEW"."EVENT_LOG_ID" AS "EVENT_LOG_ID", 
       "CURING_PIVOT_VIEW"."CREATED" AS "CREATED", 
@@ -59,13 +58,13 @@
       "CURING_PIVOT_VIEW"."CURE_NUM" AS "CURE_NUM"
       FROM "ORACLE"."CURING_PIVOT_VIEW" "CURING_PIVOT_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="CURRENT_SHIFT_VIEW" EntityType="Model.Store.CURRENT_SHIFT_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="CURRENT_SHIFT_VIEW">
+          <EntitySet Name="CURRENT_SHIFT_VIEW" EntityType="Model.Store.CURRENT_SHIFT_VIEW" store:Type="Views" store:Schema="MRT" store:Name="CURRENT_SHIFT_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "CURRENT_SHIFT_VIEW"."SHIFT" AS "SHIFT", 
       "CURRENT_SHIFT_VIEW"."WORK_DATE" AS "WORK_DATE"
       FROM "ORACLE"."CURRENT_SHIFT_VIEW" "CURRENT_SHIFT_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="DOWNTIME_ORPHANS" EntityType="Model.Store.DOWNTIME_ORPHANS" store:Type="Views" store:Schema="ORACLE" store:Name="DOWNTIME_ORPHANS">
+          <EntitySet Name="DOWNTIME_ORPHANS" EntityType="Model.Store.DOWNTIME_ORPHANS" store:Type="Views" store:Schema="MRT" store:Name="DOWNTIME_ORPHANS" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "DOWNTIME_ORPHANS"."STARTLOGID" AS "STARTLOGID", 
       "DOWNTIME_ORPHANS"."ENDLOGID" AS "ENDLOGID", 
@@ -82,7 +81,7 @@
       "DOWNTIME_ORPHANS"."DESCRIPTION" AS "DESCRIPTION"
       FROM "ORACLE"."DOWNTIME_ORPHANS" "DOWNTIME_ORPHANS"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="EVENT_CARD_LOG_VIEW" EntityType="Model.Store.EVENT_CARD_LOG_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="EVENT_CARD_LOG_VIEW">
+          <EntitySet Name="EVENT_CARD_LOG_VIEW" EntityType="Model.Store.EVENT_CARD_LOG_VIEW" store:Type="Views" store:Schema="MRT" store:Name="EVENT_CARD_LOG_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "EVENT_CARD_LOG_VIEW"."EVENT_CARD_LOG_ID" AS "EVENT_CARD_LOG_ID", 
       "EVENT_CARD_LOG_VIEW"."CREATED_ON" AS "CREATED_ON", 
@@ -100,21 +99,21 @@
       "EVENT_CARD_LOG_VIEW"."TOTAL_DOWNTIME_SECONDS" AS "TOTAL_DOWNTIME_SECONDS"
       FROM "ORACLE"."EVENT_CARD_LOG_VIEW" "EVENT_CARD_LOG_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="EVENT_COUNT_VIEW" EntityType="Model.Store.EVENT_COUNT_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="EVENT_COUNT_VIEW">
+          <EntitySet Name="EVENT_COUNT_VIEW" EntityType="Model.Store.EVENT_COUNT_VIEW" store:Type="Views" store:Schema="MRT" store:Name="EVENT_COUNT_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "EVENT_COUNT_VIEW"."EVENT_ID" AS "EVENT_ID", 
       "EVENT_COUNT_VIEW"."NAME" AS "NAME", 
       "EVENT_COUNT_VIEW"."EVENT_COUNT" AS "EVENT_COUNT"
       FROM "ORACLE"."EVENT_COUNT_VIEW" "EVENT_COUNT_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="EVENT_DATA_COUNT_VIEW" EntityType="Model.Store.EVENT_DATA_COUNT_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="EVENT_DATA_COUNT_VIEW">
+          <EntitySet Name="EVENT_DATA_COUNT_VIEW" EntityType="Model.Store.EVENT_DATA_COUNT_VIEW" store:Type="Views" store:Schema="MRT" store:Name="EVENT_DATA_COUNT_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "EVENT_DATA_COUNT_VIEW"."EVENT_DATA_ID" AS "EVENT_DATA_ID", 
       "EVENT_DATA_COUNT_VIEW"."EVENT_DATA_NAME" AS "EVENT_DATA_NAME", 
       "EVENT_DATA_COUNT_VIEW"."TOTAL_COUNT" AS "TOTAL_COUNT"
       FROM "ORACLE"."EVENT_DATA_COUNT_VIEW" "EVENT_DATA_COUNT_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="EVENT_LAST_GOODTIRE_SEC_NEW" EntityType="Model.Store.EVENT_LAST_GOODTIRE_SEC_NEW" store:Type="Views" store:Schema="ORACLE" store:Name="EVENT_LAST_GOODTIRE_SEC_NEW">
+          <EntitySet Name="EVENT_LAST_GOODTIRE_SEC_NEW" EntityType="Model.Store.EVENT_LAST_GOODTIRE_SEC_NEW" store:Type="Views" store:Schema="MRT" store:Name="EVENT_LAST_GOODTIRE_SEC_NEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "EVENT_LAST_GOODTIRE_SEC_NEW"."EVENT_LOG_ID" AS "EVENT_LOG_ID", 
       "EVENT_LAST_GOODTIRE_SEC_NEW"."WORK_DATE" AS "WORK_DATE", 
@@ -125,7 +124,7 @@
       "EVENT_LAST_GOODTIRE_SEC_NEW"."ELAPSED_SECONDS" AS "ELAPSED_SECONDS"
       FROM "ORACLE"."EVENT_LAST_GOODTIRE_SEC_NEW" "EVENT_LAST_GOODTIRE_SEC_NEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="EVENT_LAST_GOODTIRE_SECONDS" EntityType="Model.Store.EVENT_LAST_GOODTIRE_SECONDS" store:Type="Views" store:Schema="ORACLE" store:Name="EVENT_LAST_GOODTIRE_SECONDS">
+          <EntitySet Name="EVENT_LAST_GOODTIRE_SECONDS" EntityType="Model.Store.EVENT_LAST_GOODTIRE_SECONDS" store:Type="Views" store:Schema="MRT" store:Name="EVENT_LAST_GOODTIRE_SECONDS" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "EVENT_LAST_GOODTIRE_SECONDS"."EVENT_LOG_ID" AS "EVENT_LOG_ID", 
       "EVENT_LAST_GOODTIRE_SECONDS"."WORK_DATE" AS "WORK_DATE", 
@@ -136,7 +135,7 @@
       "EVENT_LAST_GOODTIRE_SECONDS"."ELAPSED_SECONDS" AS "ELAPSED_SECONDS"
       FROM "ORACLE"."EVENT_LAST_GOODTIRE_SECONDS" "EVENT_LAST_GOODTIRE_SECONDS"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="EVENT_LOG_VIEW" EntityType="Model.Store.EVENT_LOG_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="EVENT_LOG_VIEW">
+          <EntitySet Name="EVENT_LOG_VIEW" EntityType="Model.Store.EVENT_LOG_VIEW" store:Type="Views" store:Schema="MRT" store:Name="EVENT_LOG_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "EVENT_LOG_VIEW"."LOG_ID" AS "LOG_ID", 
       "EVENT_LOG_VIEW"."LOG_DATE" AS "LOG_DATE", 
@@ -159,7 +158,7 @@
       "EVENT_LOG_VIEW"."DATA_VALUE" AS "DATA_VALUE"
       FROM "ORACLE"."EVENT_LOG_VIEW" "EVENT_LOG_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="EVENT_LOG_VIEW_WITH_SHIFT" EntityType="Model.Store.EVENT_LOG_VIEW_WITH_SHIFT" store:Type="Views" store:Schema="ORACLE" store:Name="EVENT_LOG_VIEW_WITH_SHIFT">
+          <EntitySet Name="EVENT_LOG_VIEW_WITH_SHIFT" EntityType="Model.Store.EVENT_LOG_VIEW_WITH_SHIFT" store:Type="Views" store:Schema="MRT" store:Name="EVENT_LOG_VIEW_WITH_SHIFT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "EVENT_LOG_VIEW_WITH_SHIFT"."EVENT_LOG_ID" AS "EVENT_LOG_ID", 
       "EVENT_LOG_VIEW_WITH_SHIFT"."EVENT_CREATED" AS "EVENT_CREATED", 
@@ -182,7 +181,7 @@
       "EVENT_LOG_VIEW_WITH_SHIFT"."WORK_SHIFT" AS "WORK_SHIFT"
       FROM "ORACLE"."EVENT_LOG_VIEW_WITH_SHIFT" "EVENT_LOG_VIEW_WITH_SHIFT"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="EVENT_LOG_VIEW_WITH_SHIFT_NEW" EntityType="Model.Store.EVENT_LOG_VIEW_WITH_SHIFT_NEW" store:Type="Views" store:Schema="ORACLE" store:Name="EVENT_LOG_VIEW_WITH_SHIFT_NEW">
+          <EntitySet Name="EVENT_LOG_VIEW_WITH_SHIFT_NEW" EntityType="Model.Store.EVENT_LOG_VIEW_WITH_SHIFT_NEW" store:Type="Views" store:Schema="MRT" store:Name="EVENT_LOG_VIEW_WITH_SHIFT_NEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "EVENT_LOG_VIEW_WITH_SHIFT_NEW"."EVENT_LOG_ID" AS "EVENT_LOG_ID", 
       "EVENT_LOG_VIEW_WITH_SHIFT_NEW"."EVENT_CREATED" AS "EVENT_CREATED", 
@@ -205,7 +204,7 @@
       "EVENT_LOG_VIEW_WITH_SHIFT_NEW"."WORK_SHIFT" AS "WORK_SHIFT"
       FROM "ORACLE"."EVENT_LOG_VIEW_WITH_SHIFT_NEW" "EVENT_LOG_VIEW_WITH_SHIFT_NEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="FINISHING_PIVOT_VIEW" EntityType="Model.Store.FINISHING_PIVOT_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="FINISHING_PIVOT_VIEW">
+          <EntitySet Name="FINISHING_PIVOT_VIEW" EntityType="Model.Store.FINISHING_PIVOT_VIEW" store:Type="Views" store:Schema="MRT" store:Name="FINISHING_PIVOT_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "FINISHING_PIVOT_VIEW"."EVENT_LOG_ID" AS "EVENT_LOG_ID", 
       "FINISHING_PIVOT_VIEW"."CREATED" AS "CREATED", 
@@ -231,7 +230,7 @@
       "FINISHING_PIVOT_VIEW"."WEIGHT" AS "WEIGHT"
       FROM "ORACLE"."FINISHING_PIVOT_VIEW" "FINISHING_PIVOT_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="GTI_BUILT_VIEW" EntityType="Model.Store.GTI_BUILT_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="GTI_BUILT_VIEW">
+          <EntitySet Name="GTI_BUILT_VIEW" EntityType="Model.Store.GTI_BUILT_VIEW" store:Type="Views" store:Schema="MRT" store:Name="GTI_BUILT_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "GTI_BUILT_VIEW"."ROW_SEQ" AS "ROW_SEQ", 
       "GTI_BUILT_VIEW"."MACHINE_NUMBER" AS "MACHINE_NUMBER", 
@@ -246,13 +245,13 @@
       "GTI_BUILT_VIEW"."AREA" AS "AREA"
       FROM "ORACLE"."GTI_BUILT_VIEW" "GTI_BUILT_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="GTI_COUNT_VIEW" EntityType="Model.Store.GTI_COUNT_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="GTI_COUNT_VIEW">
+          <EntitySet Name="GTI_COUNT_VIEW" EntityType="Model.Store.GTI_COUNT_VIEW" store:Type="Views" store:Schema="MRT" store:Name="GTI_COUNT_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "GTI_COUNT_VIEW"."GREEN_TIRE_NUMBER" AS "GREEN_TIRE_NUMBER", 
       "GTI_COUNT_VIEW"."COUNT" AS "COUNT"
       FROM "ORACLE"."GTI_COUNT_VIEW" "GTI_COUNT_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="GTI_CURED_VIEW" EntityType="Model.Store.GTI_CURED_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="GTI_CURED_VIEW">
+          <EntitySet Name="GTI_CURED_VIEW" EntityType="Model.Store.GTI_CURED_VIEW" store:Type="Views" store:Schema="MRT" store:Name="GTI_CURED_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "GTI_CURED_VIEW"."ROW_SEQ" AS "ROW_SEQ", 
       "GTI_CURED_VIEW"."POT_NUMBER" AS "POT_NUMBER", 
@@ -271,7 +270,7 @@
       "GTI_CURED_VIEW"."AREA" AS "AREA"
       FROM "ORACLE"."GTI_CURED_VIEW" "GTI_CURED_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="MACHINE_COUNT_VIEW" EntityType="Model.Store.MACHINE_COUNT_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="MACHINE_COUNT_VIEW">
+          <EntitySet Name="MACHINE_COUNT_VIEW" EntityType="Model.Store.MACHINE_COUNT_VIEW" store:Type="Views" store:Schema="MRT" store:Name="MACHINE_COUNT_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "MACHINE_COUNT_VIEW"."MACHINE_ID" AS "MACHINE_ID", 
       "MACHINE_COUNT_VIEW"."NAME" AS "NAME", 
@@ -279,13 +278,13 @@
       "MACHINE_COUNT_VIEW"."EVENT_TOTAL" AS "EVENT_TOTAL"
       FROM "ORACLE"."MACHINE_COUNT_VIEW" "MACHINE_COUNT_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="MACHINE_EVENT_COUNT_LAST_Day" EntityType="Model.Store.MACHINE_EVENT_COUNT_LAST_Day" store:Type="Views" store:Schema="ORACLE" store:Name="MACHINE_EVENT_COUNT_LAST_Day">
+          <EntitySet Name="MACHINE_EVENT_COUNT_LAST_Day" EntityType="Model.Store.MACHINE_EVENT_COUNT_LAST_Day" store:Type="Views" store:Schema="MRT" store:Name="MACHINE_EVENT_COUNT_LAST_Day" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "MACHINE_EVENT_COUNT_LAST_Day"."NAME" AS "NAME", 
       "MACHINE_EVENT_COUNT_LAST_Day"."EVENT_COUNT" AS "EVENT_COUNT"
       FROM "ORACLE"."MACHINE_EVENT_COUNT_LAST_Day" "MACHINE_EVENT_COUNT_LAST_Day"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="MACHINE_GOOD_TIRE_COUNT_VIEW" EntityType="Model.Store.MACHINE_GOOD_TIRE_COUNT_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="MACHINE_GOOD_TIRE_COUNT_VIEW">
+          <EntitySet Name="MACHINE_GOOD_TIRE_COUNT_VIEW" EntityType="Model.Store.MACHINE_GOOD_TIRE_COUNT_VIEW" store:Type="Views" store:Schema="MRT" store:Name="MACHINE_GOOD_TIRE_COUNT_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "MACHINE_GOOD_TIRE_COUNT_VIEW"."MACHINE_ID" AS "MACHINE_ID", 
       "MACHINE_GOOD_TIRE_COUNT_VIEW"."NAME" AS "NAME", 
@@ -293,7 +292,7 @@
       "MACHINE_GOOD_TIRE_COUNT_VIEW"."EVENT_TOTAL" AS "EVENT_TOTAL"
       FROM "ORACLE"."MACHINE_GOOD_TIRE_COUNT_VIEW" "MACHINE_GOOD_TIRE_COUNT_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="MACHINE_GOOD_TIRE_VIEW" EntityType="Model.Store.MACHINE_GOOD_TIRE_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="MACHINE_GOOD_TIRE_VIEW">
+          <EntitySet Name="MACHINE_GOOD_TIRE_VIEW" EntityType="Model.Store.MACHINE_GOOD_TIRE_VIEW" store:Type="Views" store:Schema="MRT" store:Name="MACHINE_GOOD_TIRE_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "MACHINE_GOOD_TIRE_VIEW"."MACHINE_ID" AS "MACHINE_ID", 
       "MACHINE_GOOD_TIRE_VIEW"."MACHINE_NAME" AS "MACHINE_NAME", 
@@ -306,7 +305,7 @@
       "MACHINE_GOOD_TIRE_VIEW"."PART_CREATED" AS "PART_CREATED"
       FROM "ORACLE"."MACHINE_GOOD_TIRE_VIEW" "MACHINE_GOOD_TIRE_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="MACHINE_GOOD_TIRE_VIEW_NEW" EntityType="Model.Store.MACHINE_GOOD_TIRE_VIEW_NEW" store:Type="Views" store:Schema="ORACLE" store:Name="MACHINE_GOOD_TIRE_VIEW_NEW">
+          <EntitySet Name="MACHINE_GOOD_TIRE_VIEW_NEW" EntityType="Model.Store.MACHINE_GOOD_TIRE_VIEW_NEW" store:Type="Views" store:Schema="MRT" store:Name="MACHINE_GOOD_TIRE_VIEW_NEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "MACHINE_GOOD_TIRE_VIEW_NEW"."MACHINE_ID" AS "MACHINE_ID", 
       "MACHINE_GOOD_TIRE_VIEW_NEW"."MACHINE_NAME" AS "MACHINE_NAME", 
@@ -320,7 +319,7 @@
       "MACHINE_GOOD_TIRE_VIEW_NEW"."EVENT_LOG_ID" AS "EVENT_LOG_ID"
       FROM "ORACLE"."MACHINE_GOOD_TIRE_VIEW_NEW" "MACHINE_GOOD_TIRE_VIEW_NEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="MACHINE_PART_VIEW" EntityType="Model.Store.MACHINE_PART_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="MACHINE_PART_VIEW">
+          <EntitySet Name="MACHINE_PART_VIEW" EntityType="Model.Store.MACHINE_PART_VIEW" store:Type="Views" store:Schema="MRT" store:Name="MACHINE_PART_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "MACHINE_PART_VIEW"."MACHINE_ID" AS "MACHINE_ID", 
       "MACHINE_PART_VIEW"."MACHINE_NAME" AS "MACHINE_NAME", 
@@ -333,7 +332,7 @@
       "MACHINE_PART_VIEW"."PART_CREATED" AS "PART_CREATED"
       FROM "ORACLE"."MACHINE_PART_VIEW" "MACHINE_PART_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="MACHINE_PART_VIEW_NEW" EntityType="Model.Store.MACHINE_PART_VIEW_NEW" store:Type="Views" store:Schema="ORACLE" store:Name="MACHINE_PART_VIEW_NEW">
+          <EntitySet Name="MACHINE_PART_VIEW_NEW" EntityType="Model.Store.MACHINE_PART_VIEW_NEW" store:Type="Views" store:Schema="MRT" store:Name="MACHINE_PART_VIEW_NEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "MACHINE_PART_VIEW_NEW"."MACHINE_ID" AS "MACHINE_ID", 
       "MACHINE_PART_VIEW_NEW"."MACHINE_NAME" AS "MACHINE_NAME", 
@@ -347,14 +346,14 @@
       "MACHINE_PART_VIEW_NEW"."EVENT_LOG_ID" AS "EVENT_LOG_ID"
       FROM "ORACLE"."MACHINE_PART_VIEW_NEW" "MACHINE_PART_VIEW_NEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="MACHINE_SCAN_SCORE" EntityType="Model.Store.MACHINE_SCAN_SCORE" store:Type="Views" store:Schema="ORACLE" store:Name="MACHINE_SCAN_SCORE">
+          <EntitySet Name="MACHINE_SCAN_SCORE" EntityType="Model.Store.MACHINE_SCAN_SCORE" store:Type="Views" store:Schema="MRT" store:Name="MACHINE_SCAN_SCORE" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "MACHINE_SCAN_SCORE"."EVENT_LOG_ID" AS "EVENT_LOG_ID", 
       "MACHINE_SCAN_SCORE"."GOOD_READS" AS "GOOD_READS", 
       "MACHINE_SCAN_SCORE"."BAD_READS" AS "BAD_READS"
       FROM "ORACLE"."MACHINE_SCAN_SCORE" "MACHINE_SCAN_SCORE"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="OPERATOR_GOOD_TIRE_COUNT_VIEW" EntityType="Model.Store.OPERATOR_GOOD_TIRE_COUNT_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="OPERATOR_GOOD_TIRE_COUNT_VIEW">
+          <EntitySet Name="OPERATOR_GOOD_TIRE_COUNT_VIEW" EntityType="Model.Store.OPERATOR_GOOD_TIRE_COUNT_VIEW" store:Type="Views" store:Schema="MRT" store:Name="OPERATOR_GOOD_TIRE_COUNT_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "OPERATOR_GOOD_TIRE_COUNT_VIEW"."OPERATOR_ID" AS "OPERATOR_ID", 
       "OPERATOR_GOOD_TIRE_COUNT_VIEW"."SERIAL_NUMBER" AS "SERIAL_NUMBER", 
@@ -363,7 +362,7 @@
       "OPERATOR_GOOD_TIRE_COUNT_VIEW"."EVENT_COUNT" AS "EVENT_COUNT"
       FROM "ORACLE"."OPERATOR_GOOD_TIRE_COUNT_VIEW" "OPERATOR_GOOD_TIRE_COUNT_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="OPERATOR_GOOD_TIRE_VIEW" EntityType="Model.Store.OPERATOR_GOOD_TIRE_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="OPERATOR_GOOD_TIRE_VIEW">
+          <EntitySet Name="OPERATOR_GOOD_TIRE_VIEW" EntityType="Model.Store.OPERATOR_GOOD_TIRE_VIEW" store:Type="Views" store:Schema="MRT" store:Name="OPERATOR_GOOD_TIRE_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "OPERATOR_GOOD_TIRE_VIEW"."OPERATOR_ID" AS "OPERATOR_ID", 
       "OPERATOR_GOOD_TIRE_VIEW"."OPERATOR_SERIAL_NUMBER" AS "OPERATOR_SERIAL_NUMBER", 
@@ -379,7 +378,7 @@
       "OPERATOR_GOOD_TIRE_VIEW"."LOG_CREATED" AS "LOG_CREATED"
       FROM "ORACLE"."OPERATOR_GOOD_TIRE_VIEW" "OPERATOR_GOOD_TIRE_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="OPERATOR_GOOD_TIRE_VIEW_NEW" EntityType="Model.Store.OPERATOR_GOOD_TIRE_VIEW_NEW" store:Type="Views" store:Schema="ORACLE" store:Name="OPERATOR_GOOD_TIRE_VIEW_NEW">
+          <EntitySet Name="OPERATOR_GOOD_TIRE_VIEW_NEW" EntityType="Model.Store.OPERATOR_GOOD_TIRE_VIEW_NEW" store:Type="Views" store:Schema="MRT" store:Name="OPERATOR_GOOD_TIRE_VIEW_NEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "OPERATOR_GOOD_TIRE_VIEW_NEW"."OPERATOR_ID" AS "OPERATOR_ID", 
       "OPERATOR_GOOD_TIRE_VIEW_NEW"."OPERATOR_SERIAL_NUMBER" AS "OPERATOR_SERIAL_NUMBER", 
@@ -396,7 +395,7 @@
       "OPERATOR_GOOD_TIRE_VIEW_NEW"."EVENT_LOG_ID" AS "EVENT_LOG_ID"
       FROM "ORACLE"."OPERATOR_GOOD_TIRE_VIEW_NEW" "OPERATOR_GOOD_TIRE_VIEW_NEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="OPERATOR_PART_VIEW" EntityType="Model.Store.OPERATOR_PART_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="OPERATOR_PART_VIEW">
+          <EntitySet Name="OPERATOR_PART_VIEW" EntityType="Model.Store.OPERATOR_PART_VIEW" store:Type="Views" store:Schema="MRT" store:Name="OPERATOR_PART_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "OPERATOR_PART_VIEW"."OPERATOR_ID" AS "OPERATOR_ID", 
       "OPERATOR_PART_VIEW"."OPERATOR_SERIAL_NUMBER" AS "OPERATOR_SERIAL_NUMBER", 
@@ -411,7 +410,7 @@
       "OPERATOR_PART_VIEW"."PART_CREATED" AS "PART_CREATED"
       FROM "ORACLE"."OPERATOR_PART_VIEW" "OPERATOR_PART_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="OPERATOR_PART_VIEW_NEW" EntityType="Model.Store.OPERATOR_PART_VIEW_NEW" store:Type="Views" store:Schema="ORACLE" store:Name="OPERATOR_PART_VIEW_NEW">
+          <EntitySet Name="OPERATOR_PART_VIEW_NEW" EntityType="Model.Store.OPERATOR_PART_VIEW_NEW" store:Type="Views" store:Schema="MRT" store:Name="OPERATOR_PART_VIEW_NEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "OPERATOR_PART_VIEW_NEW"."OPERATOR_ID" AS "OPERATOR_ID", 
       "OPERATOR_PART_VIEW_NEW"."OPERATOR_SERIAL_NUMBER" AS "OPERATOR_SERIAL_NUMBER", 
@@ -427,14 +426,14 @@
       "OPERATOR_PART_VIEW_NEW"."EVENT_LOG_ID" AS "EVENT_LOG_ID"
       FROM "ORACLE"."OPERATOR_PART_VIEW_NEW" "OPERATOR_PART_VIEW_NEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="OPERATOR_PARTS_BUILD_FINISH" EntityType="Model.Store.OPERATOR_PARTS_BUILD_FINISH" store:Type="Views" store:Schema="ORACLE" store:Name="OPERATOR_PARTS_BUILD_FINISH">
+          <EntitySet Name="OPERATOR_PARTS_BUILD_FINISH" EntityType="Model.Store.OPERATOR_PARTS_BUILD_FINISH" store:Type="Views" store:Schema="MRT" store:Name="OPERATOR_PARTS_BUILD_FINISH" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "OPERATOR_PARTS_BUILD_FINISH"."OPERATOR_ID" AS "OPERATOR_ID", 
       "OPERATOR_PARTS_BUILD_FINISH"."BUILD_PART_ID" AS "BUILD_PART_ID", 
       "OPERATOR_PARTS_BUILD_FINISH"."FINISH_PART_ID" AS "FINISH_PART_ID"
       FROM "ORACLE"."OPERATOR_PARTS_BUILD_FINISH" "OPERATOR_PARTS_BUILD_FINISH"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="PART_BUILD_CURE_VIEW" EntityType="Model.Store.PART_BUILD_CURE_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="PART_BUILD_CURE_VIEW">
+          <EntitySet Name="PART_BUILD_CURE_VIEW" EntityType="Model.Store.PART_BUILD_CURE_VIEW" store:Type="Views" store:Schema="MRT" store:Name="PART_BUILD_CURE_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "PART_BUILD_CURE_VIEW"."PART_SERIAL_NUMBER" AS "PART_SERIAL_NUMBER", 
       "PART_BUILD_CURE_VIEW"."GREEN_TIRE_NUMBER" AS "GREEN_TIRE_NUMBER", 
@@ -451,7 +450,7 @@
       "PART_BUILD_CURE_VIEW"."CREATED" AS "CREATED"
       FROM "ORACLE"."PART_BUILD_CURE_VIEW" "PART_BUILD_CURE_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="PART_EVENT_VIEW" EntityType="Model.Store.PART_EVENT_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="PART_EVENT_VIEW">
+          <EntitySet Name="PART_EVENT_VIEW" EntityType="Model.Store.PART_EVENT_VIEW" store:Type="Views" store:Schema="MRT" store:Name="PART_EVENT_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "PART_EVENT_VIEW"."EVENT_LOG_ID" AS "EVENT_LOG_ID", 
       "PART_EVENT_VIEW"."EVENT_LOG_CREATED" AS "EVENT_LOG_CREATED", 
@@ -460,7 +459,7 @@
       "PART_EVENT_VIEW"."MACHINE_NAME" AS "MACHINE_NAME"
       FROM "ORACLE"."PART_EVENT_VIEW" "PART_EVENT_VIEW"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="SAP_NOTIFICATION_LOG" EntityType="Model.Store.SAP_NOTIFICATION_LOG" store:Type="Views" store:Schema="ORACLE" store:Name="SAP_NOTIFICATION_LOG">
+          <EntitySet Name="SAP_NOTIFICATION_LOG" EntityType="Model.Store.SAP_NOTIFICATION_LOG" store:Type="Views" store:Schema="MRT" store:Name="SAP_NOTIFICATION_LOG" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "SAP_NOTIFICATION_LOG"."NOTIFICATION_LOG_ID" AS "NOTIFICATION_LOG_ID", 
       "SAP_NOTIFICATION_LOG"."CREATED_ON" AS "CREATED_ON", 
@@ -476,7 +475,7 @@
       "SAP_NOTIFICATION_LOG"."FUNCTIONAL_LOCATION" AS "FUNCTIONAL_LOCATION"
       FROM "ORACLE"."SAP_NOTIFICATION_LOG" "SAP_NOTIFICATION_LOG"</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="SHIFT_VIEW" EntityType="Model.Store.SHIFT_VIEW" store:Type="Views" store:Schema="ORACLE" store:Name="SHIFT_VIEW">
+          <EntitySet Name="SHIFT_VIEW" EntityType="Model.Store.SHIFT_VIEW" store:Type="Views" store:Schema="MRT" store:Name="SHIFT_VIEW" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "SHIFT_VIEW"."SHIFT" AS "SHIFT"
       FROM "ORACLE"."SHIFT_VIEW" "SHIFT_VIEW"</DefiningQuery>
@@ -1571,57 +1570,57 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="GET_DOWNTIME_TOTAL" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="GET_DOWNTIME_TOTAL" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_EVENT_CARD_LOG_ID" Type="number" Mode="In" />
         </Function>
-        <Function Name="GET_EVENT_DATA_ID" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="GET_EVENT_DATA_ID" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_EVENT_DATA_NAME" Type="nvarchar2" Mode="In" />
         </Function>
-        <Function Name="GET_EVENT_ID" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="GET_EVENT_ID" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_EVENT_NAME" Type="nvarchar2" Mode="In" />
         </Function>
-        <Function Name="GET_LAST_GOODTIRE_TIME" ReturnType="date" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="GET_LAST_GOODTIRE_TIME" ReturnType="date" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_EVENT_LOG_ID" Type="number" Mode="In" />
         </Function>
-        <Function Name="GET_LAST_GOODTIRE_TIME_NEW" ReturnType="date" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="GET_LAST_GOODTIRE_TIME_NEW" ReturnType="date" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_EVENT_LOG_ID" Type="number" Mode="In" />
         </Function>
-        <Function Name="GET_LAST_GOODTIRE_TIME_OLD" ReturnType="date" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="GET_LAST_GOODTIRE_TIME_OLD" ReturnType="date" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_EVENT_LOG_ID" Type="number" Mode="In" />
         </Function>
-        <Function Name="GET_LAST_MACHINE_EVENT_TIME" ReturnType="date" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="GET_LAST_MACHINE_EVENT_TIME" ReturnType="date" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_EVENT_LOG_ID" Type="number" Mode="In" />
         </Function>
-        <Function Name="GET_LAST_MACHINE_EVENT_TIM_OLD" ReturnType="date" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="GET_LAST_MACHINE_EVENT_TIM_OLD" ReturnType="date" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_EVENT_LOG_ID" Type="number" Mode="In" />
         </Function>
-        <Function Name="GET_MACHINE_ID" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="GET_MACHINE_ID" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_MACHINE_NAME" Type="nvarchar2" Mode="In" />
         </Function>
-        <Function Name="GET_OPERATOR_ID" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="GET_OPERATOR_ID" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_SERIAL_NUMBER" Type="nvarchar2" Mode="In" />
         </Function>
-        <Function Name="GET_PART_ID" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="GET_PART_ID" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_SERIAL_NUMBER" Type="varchar2" Mode="In" />
         </Function>
-        <Function Name="GET_SHIFT_START" ReturnType="date" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="GET_SHIFT_START" ReturnType="date" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_DATE" Type="date" Mode="In" />
         </Function>
-        <Function Name="GET_WORK_DATE" ReturnType="date" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="GET_WORK_DATE" ReturnType="date" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_DATE" Type="date" Mode="In" />
         </Function>
-        <Function Name="GET_WORK_SHIFT" ReturnType="varchar2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="GET_WORK_SHIFT" ReturnType="varchar2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_DATE" Type="date" Mode="In" />
         </Function>
-        <Function Name="HANDLE_CURE_TIRE_LOG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="HANDLE_CURE_TIRE_LOG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_EVENT_LOG_ID" Type="number" Mode="In" />
           <Parameter Name="P_PART_SERIAL" Type="varchar2" Mode="In" />
           <Parameter Name="P_POT" Type="varchar2" Mode="In" />
         </Function>
-        <Function Name="INSERT_DEFECT_EXPORT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="INSERT_DEFECT_EXPORT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_EVENT_LOG_ID" Type="varchar2" Mode="In" />
         </Function>
-        <Function Name="INSERT_EVENT_CARD_LOG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="INSERT_EVENT_CARD_LOG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_EVENT_NAME" Type="nvarchar2" Mode="In" />
           <Parameter Name="P_OPERATOR_SERIAL" Type="varchar2" Mode="In" />
           <Parameter Name="P_MACHINE" Type="nvarchar2" Mode="In" />
@@ -1633,7 +1632,7 @@
           <Parameter Name="P_DATA_VALUE5" Type="nvarchar2" Mode="In" />
           <Parameter Name="P_DATA_NAME1" Type="nvarchar2" Mode="In" />
         </Function>
-        <Function Name="INSERT_EVENT_LOG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="INSERT_EVENT_LOG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="EVENT_NAME" Type="nvarchar2" Mode="In" />
           <Parameter Name="MACHINE_NAME" Type="nvarchar2" Mode="In" />
           <Parameter Name="PART_SERIAL_NUMBER" Type="varchar2" Mode="In" />
@@ -1679,12 +1678,12 @@
           <Parameter Name="DATA_NAME_20" Type="varchar2" Mode="In" />
           <Parameter Name="DATA_VALUE_20" Type="nvarchar2" Mode="In" />
         </Function>
-        <Function Name="INSERT_EVENT_LOG_DATA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="INSERT_EVENT_LOG_DATA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="EVENT_LOG_ID" Type="number" Mode="In" />
           <Parameter Name="DATA_NAME" Type="varchar2" Mode="In" />
           <Parameter Name="DATA_VALUE" Type="nvarchar2" Mode="In" />
         </Function>
-        <Function Name="INSERT_EVENT_LOG_NEW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="INSERT_EVENT_LOG_NEW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="EVENT_NAME" Type="nvarchar2" Mode="In" />
           <Parameter Name="MACHINE_NAME" Type="nvarchar2" Mode="In" />
           <Parameter Name="PART_SERIAL_NUMBER" Type="varchar2" Mode="In" />
@@ -1730,7 +1729,7 @@
           <Parameter Name="DATA_NAME_20" Type="varchar2" Mode="In" />
           <Parameter Name="DATA_VALUE_20" Type="nvarchar2" Mode="In" />
         </Function>
-        <Function Name="INSERT_EVENT_LOG_OLD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="INSERT_EVENT_LOG_OLD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="EVENT_NAME" Type="nvarchar2" Mode="In" />
           <Parameter Name="MACHINE_NAME" Type="nvarchar2" Mode="In" />
           <Parameter Name="PART_SERIAL_NUMBER" Type="varchar2" Mode="In" />
@@ -1776,15 +1775,15 @@
           <Parameter Name="DATA_NAME_20" Type="varchar2" Mode="In" />
           <Parameter Name="DATA_VALUE_20" Type="nvarchar2" Mode="In" />
         </Function>
-        <Function Name="INSERT_GOODTIRE_LOG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="INSERT_GOODTIRE_LOG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_EVENT_LOG_ID" Type="number" Mode="In" />
         </Function>
-        <Function Name="INSERT_GTI_EXPORT_CURED" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="INSERT_GTI_EXPORT_CURED" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_PART_SERIAL_NUMBER" Type="varchar2" Mode="In" />
           <Parameter Name="P_OPERATOR_SERIAL_NUMBER" Type="varchar2" Mode="In" />
           <Parameter Name="P_MACHINE_NAME" Type="varchar2" Mode="In" />
         </Function>
-        <Function Name="INSERT_NOTIFICATION_LOG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="INSERT_NOTIFICATION_LOG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_MACHINE" Type="nvarchar2" Mode="In" />
           <Parameter Name="P_OPERATOR_SERIAL" Type="varchar2" Mode="In" />
           <Parameter Name="P_CALL_TYPE" Type="nvarchar2" Mode="In" />
@@ -1793,24 +1792,24 @@
           <Parameter Name="P_SYMPTOM" Type="nvarchar2" Mode="In" />
           <Parameter Name="P_COMMENT" Type="nvarchar2" Mode="In" />
         </Function>
-        <Function Name="ISNUMERIC" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="ISNUMERIC" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="V" Type="varchar2" Mode="In" />
         </Function>
-        <Function Name="SECONDS_DIFF" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="SECONDS_DIFF" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="DATE_1" Type="date" Mode="In" />
           <Parameter Name="DATE_2" Type="date" Mode="In" />
         </Function>
-        <Function Name="SELECT_OP_BUILD_FINISH_PCT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="SELECT_OP_BUILD_FINISH_PCT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_START_DATE" Type="date" Mode="In" />
           <Parameter Name="P_END_DATE" Type="date" Mode="In" />
         </Function>
-        <Function Name="SELECT_PART_HISTORY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="SELECT_PART_HISTORY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_PART_SERIAL_NUMBER" Type="varchar2" Mode="In" />
         </Function>
-        <Function Name="TONUMERIC" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="TONUMERIC" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="V" Type="varchar2" Mode="In" />
         </Function>
-        <Function Name="UPDATE_CURING_SETUP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ORACLE">
+        <Function Name="UPDATE_CURING_SETUP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="MRT">
           <Parameter Name="P_DEPARTMENT" Type="number" Mode="In" />
           <Parameter Name="P_POT" Type="varchar2" Mode="In" />
           <Parameter Name="P_GREEN_TIRE_NUMBER" Type="varchar2" Mode="In" />
@@ -2102,7 +2101,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
         <EntityContainer Name="Entities" p1:LazyLoadingEnabled="true">
           <EntitySet Name="CURING_SETUP" EntityType="Model.CURING_SETUP" />
           <EntitySet Name="DEFECT_EXPORT" EntityType="Model.DEFECT_EXPORT" />
@@ -3360,7 +3359,7 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="CURING_SETUP">
             <EntityTypeMapping TypeName="Model.CURING_SETUP">
@@ -4264,7 +4263,7 @@
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <Connection>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
@@ -4276,9 +4275,10 @@
         <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="DefaultDatabaseSchema" Value="ORACLE" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams></Diagrams>
+    <Diagrams />
   </Designer>
 </edmx:Edmx>

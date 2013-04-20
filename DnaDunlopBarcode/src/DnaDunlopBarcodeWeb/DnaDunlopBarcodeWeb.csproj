@@ -13,13 +13,14 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DnaDunlopBarcodeWeb</RootNamespace>
     <AssemblyName>DnaDunlopBarcodeWeb</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,6 +46,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
@@ -53,13 +55,14 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Abstractions" />
-    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -76,6 +79,7 @@
       <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
+      <Private>False</Private>
     </Reference>
     <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
@@ -115,6 +119,7 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
@@ -138,45 +143,56 @@
     <Compile Include="Controllers\Rest\PartController.cs" />
     <Compile Include="Models\CURING_PIVOT_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\CURING_SETUP.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\CURRENT_SHIFT_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\DEFECT_EXPORT.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\DELAY_CODES.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\DEPARTMENT.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\DepartmentLog.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\DnaDunlopBarcode.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>DnaDunlopBarcode.Context.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Models\DnaDunlopBarcode.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Models\DnaDunlopBarcode.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>DnaDunlopBarcode.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Models\DOWNTIME_ORPHANS.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\EVENT.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\EventSearch.cs" />
     <Compile Include="Models\EventSearchResult.cs" />
@@ -185,156 +201,207 @@
     </Compile>
     <Compile Include="Models\EVENT_CARD_LOG.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\EVENT_CARD_LOG_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\EVENT_COUNT_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\EVENT_DATA.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\EVENT_DATA_COUNT_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\EVENT_LAST_GOODTIRE_SECONDS.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\EVENT_LAST_GOODTIRE_SEC_NEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\EVENT_LOG.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\EVENT_LOG_DATA.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\EVENT_LOG_SHIFT.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\EVENT_LOG_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\EVENT_LOG_VIEW_WITH_SHIFT.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\EVENT_LOG_VIEW_WITH_SHIFT_NEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\FINISHING_PIVOT_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\GOODTIRE_LOG.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\GreenTire.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\GTI_BUILT_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\GTI_COUNT_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\GTI_CURED_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\GTI_EXPORT_BUILT.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\GTI_EXPORT_CURED.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\MACHINE.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\MACHINE_COUNT_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\MACHINE_EVENT_COUNT_LAST_Day.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\MACHINE_GOOD_TIRE_COUNT_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\MACHINE_GOOD_TIRE_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\MACHINE_GOOD_TIRE_VIEW_NEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\MACHINE_PART_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\MACHINE_PART_VIEW_NEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\MACHINE_SCAN_SCORE.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\MESSAGE.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\NOTIFICATION_LOG.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\OPERATOR.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\OPERATOR_GOOD_TIRE_COUNT_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\OPERATOR_GOOD_TIRE_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\OPERATOR_GOOD_TIRE_VIEW_NEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\OPERATOR_IMPORT.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\OPERATOR_IMPORT2.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\OPERATOR_PARTS_BUILD_FINISH.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\OPERATOR_PART_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\OPERATOR_PART_VIEW_NEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\OPERATOR_RECONCILE.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Part.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\PART_BUILD_CURE_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\PART_EVENT_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\SAP_NOTIFICATION_LOG.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\SHIFT.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\SHIFT_DEFINITION.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\SHIFT_VIEW.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\TESTINSERTEVENTLOG.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\UPH_STANDARDS.cs">
       <DependentUpon>DnaDunlopBarcode.tt</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\DepartmentLogViewModel.cs" />
@@ -399,21 +466,17 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <EntityDeploy Include="Models\DnaDunlopBarcode.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DnaDunlopBarcode.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <Content Include="Models\DnaDunlopBarcode.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DnaDunlopBarcode.edmx</DependentUpon>
+      <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DnaDunlopBarcode.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\DnaDunlopBarcode.edmx.diagram">
       <DependentUpon>DnaDunlopBarcode.edmx</DependentUpon>
     </Content>
     <Content Include="Models\DnaDunlopBarcode.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DnaDunlopBarcode.edmx</DependentUpon>
+      <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DnaDunlopBarcode.cs</LastGenOutput>
     </Content>
     <Content Include="sql\EVENT_LOG_VEIW_WITH_SHIFT.sql" />
@@ -496,6 +559,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\DnaDunlopBarcode.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DnaDunlopBarcode.Designer.cs</LastGenOutput>
+    </EntityDeploy>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
