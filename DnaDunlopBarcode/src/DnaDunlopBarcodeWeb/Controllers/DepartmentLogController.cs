@@ -95,7 +95,8 @@ namespace DnaDunlopBarcodeWeb.Controllers
                     _departmentLogApi.InitializePost();
                     _departmentLogApi.Post(log);
 
-                    return RedirectToAction("Index");
+                    //return RedirectToAction("Index");
+                    viewModel.Message = "Green Tire Number Changed!";
                 }
                 catch (Exception ex)
                 {
