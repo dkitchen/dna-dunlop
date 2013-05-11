@@ -31,7 +31,7 @@ namespace DnaDunlopBarcodeWeb.ViewModels
         public object NewGoodyearSerialNumber;
 
         [Required(ErrorMessage = "Operator Badge Number is required.")]
-        [Display(Name = "Operator Badge Number")]
+        [Display(Name = "Operator Number")]
         public object OperatorSerialNumber;
 
     }

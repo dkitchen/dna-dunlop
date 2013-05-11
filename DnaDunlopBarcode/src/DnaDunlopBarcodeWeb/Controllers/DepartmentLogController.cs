@@ -18,7 +18,7 @@ namespace DnaDunlopBarcodeWeb.Controllers
         public ActionResult Index()
         {
             var viewModel = new DepartmentLogViewModel();
-            viewModel.DepartmentLogs = _departmentLogApi.Get();
+            viewModel.DepartmentLogs = _departmentLogApi.Get().ToList();    //materializing
             return View(viewModel);
         }
 

@@ -10,11 +10,10 @@
 namespace DnaDunlopBarcodeWeb.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class GTI_COUNT_VIEW
+    public partial class GreenTireAndOperator
     {
-        public string GREEN_TIRE_NUMBER { get; set; }
-        public Nullable<decimal> COUNT { get; set; }
+        public string GreenTireNumber { get; set; }
+        public string Operator { get; set; }
     }
 }

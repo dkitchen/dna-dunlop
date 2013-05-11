@@ -5,70 +5,24 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="54656c8720e149689fd6e0c11e9806e2" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.CURING_SETUP" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.DEFECT_EXPORT" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.DELAY_CODES" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.DEPARTMENT" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.DepartmentLog" Width="2" PointX="6.375" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DEPARTMENT" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DepartmentLog" Width="2" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.EVENT" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.EVENT_CARD_LOG" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.EVENT_DATA" Width="1.5" PointX="8.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.EVENT_DATA" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.EVENT_LOG" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.EVENT_LOG_DATA" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.EVENT_LOG_SHIFT" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.GOODTIRE_LOG" Width="1.5" PointX="2.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.GreenTire" Width="1.5" PointX="10.625" PointY="2.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.GTI_EXPORT_BUILT" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.GTI_EXPORT_CURED" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.MACHINE" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.MESSAGE" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.NOTIFICATION_LOG" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.EVENT_LOG_DATA" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.EVENT_LOG_SHIFT" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.GreenTire" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.GTI_EXPORT_BUILT" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.MACHINE" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.OPERATOR" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.OPERATOR_IMPORT" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.OPERATOR_IMPORT2" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.OPERATOR_RECONCILE" Width="1.5" PointX="12.75" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.Part" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.SHIFT" Width="1.5" PointX="2.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.SHIFT_DEFINITION" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.TESTINSERTEVENTLOG" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.UPH_STANDARDS" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.CURING_PIVOT_VIEW" Width="1.5" PointX="10.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.CURRENT_SHIFT_VIEW" Width="1.5" PointX="14.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.DOWNTIME_ORPHANS" Width="1.5" PointX="12.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.EVENT_CARD_LOG_VIEW" Width="1.5" PointX="14.75" PointY="14.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.EVENT_COUNT_VIEW" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.EVENT_DATA_COUNT_VIEW" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.EVENT_LAST_GOODTIRE_SEC_NEW" Width="1.5" PointX="2.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.EVENT_LAST_GOODTIRE_SECONDS" Width="1.5" PointX="16.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.EVENT_LOG_VIEW" Width="1.5" PointX="16.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.EVENT_LOG_VIEW_WITH_SHIFT" Width="1.5" PointX="16.75" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.EVENT_LOG_VIEW_WITH_SHIFT_NEW" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.FINISHING_PIVOT_VIEW" Width="1.5" PointX="4.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.GTI_BUILT_VIEW" Width="1.5" PointX="18.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.GTI_COUNT_VIEW" Width="1.5" PointX="6.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.GTI_CURED_VIEW" Width="1.5" PointX="18.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.MACHINE_COUNT_VIEW" Width="1.5" PointX="18.75" PointY="15.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.MACHINE_EVENT_COUNT_LAST_Day" Width="1.5" PointX="18.75" PointY="18.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.MACHINE_GOOD_TIRE_COUNT_VIEW" Width="1.5" PointX="12.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.MACHINE_GOOD_TIRE_VIEW" Width="1.5" PointX="14.75" PointY="19.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.MACHINE_GOOD_TIRE_VIEW_NEW" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.MACHINE_PART_VIEW" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.MACHINE_PART_VIEW_NEW" Width="1.5" PointX="20.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.MACHINE_SCAN_SCORE" Width="1.5" PointX="20.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.OPERATOR_GOOD_TIRE_COUNT_VIEW" Width="1.5" PointX="8.75" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.OPERATOR_GOOD_TIRE_VIEW" Width="1.5" PointX="20.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.OPERATOR_GOOD_TIRE_VIEW_NEW" Width="1.5" PointX="20.75" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.OPERATOR_PART_VIEW" Width="1.5" PointX="16.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.OPERATOR_PART_VIEW_NEW" Width="1.5" PointX="18.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.OPERATOR_PARTS_BUILD_FINISH" Width="1.5" PointX="20.75" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.PART_BUILD_CURE_VIEW" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.PART_EVENT_VIEW" Width="1.5" PointX="22.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.SAP_NOTIFICATION_LOG" Width="1.5" PointX="22.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.SHIFT_VIEW" Width="1.5" PointX="10.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SHIFT" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
         <AssociationConnector Association="Model.EVENT_LOG_FK_EVENT" ManuallyRouted="false" />
         <AssociationConnector Association="Model.EVENT_LOG_FK_MACHINE" ManuallyRouted="false" />
         <AssociationConnector Association="Model.EVENT_LOG_FK_PART" ManuallyRouted="false" />
         <AssociationConnector Association="Model.EVENT_LOG_OPERATOR" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.GTN_AND_OPERATOR" Width="1.5" PointX="7" PointY="9.375" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

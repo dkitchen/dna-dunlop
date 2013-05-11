@@ -25,8 +25,6 @@ namespace DnaDunlopBarcodeWeb.Models
         public string DESCRIPTION { get; set; }
         public string EMPLOYEE_NUMBER { get; set; }
         public string GOODYEAR_PERSONNEL_NUMBER { get; set; }
-        public string STATUS { get; set; }
-        public string PAY_CLASS { get; set; }
     
         public virtual ICollection<EVENT_LOG> EVENT_LOG { get; set; }
     }

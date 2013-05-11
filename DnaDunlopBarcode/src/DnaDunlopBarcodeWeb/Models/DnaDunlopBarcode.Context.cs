@@ -28,66 +28,20 @@ namespace DnaDunlopBarcodeWeb.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<CURING_SETUP> CURING_SETUP { get; set; }
-        public DbSet<DEFECT_EXPORT> DEFECT_EXPORT { get; set; }
-        public DbSet<DELAY_CODES> DELAY_CODES { get; set; }
         public DbSet<DEPARTMENT> DEPARTMENTs { get; set; }
         public DbSet<DepartmentLog> DepartmentLogs { get; set; }
         public DbSet<EVENT> EVENTs { get; set; }
-        public DbSet<EVENT_CARD_LOG> EVENT_CARD_LOG { get; set; }
         public DbSet<EVENT_DATA> EVENT_DATA { get; set; }
         public DbSet<EVENT_LOG> EVENT_LOG { get; set; }
         public DbSet<EVENT_LOG_DATA> EVENT_LOG_DATA { get; set; }
         public DbSet<EVENT_LOG_SHIFT> EVENT_LOG_SHIFT { get; set; }
-        public DbSet<GOODTIRE_LOG> GOODTIRE_LOG { get; set; }
         public DbSet<GreenTire> GreenTires { get; set; }
         public DbSet<GTI_EXPORT_BUILT> GTI_EXPORT_BUILT { get; set; }
-        public DbSet<GTI_EXPORT_CURED> GTI_EXPORT_CURED { get; set; }
         public DbSet<MACHINE> MACHINEs { get; set; }
-        public DbSet<MESSAGE> MESSAGEs { get; set; }
-        public DbSet<NOTIFICATION_LOG> NOTIFICATION_LOG { get; set; }
         public DbSet<OPERATOR> OPERATORs { get; set; }
-        public DbSet<OPERATOR_IMPORT> OPERATOR_IMPORT { get; set; }
-        public DbSet<OPERATOR_IMPORT2> OPERATOR_IMPORT2 { get; set; }
-        public DbSet<OPERATOR_RECONCILE> OPERATOR_RECONCILE { get; set; }
         public DbSet<Part> Parts { get; set; }
         public DbSet<SHIFT> SHIFTs { get; set; }
-        public DbSet<SHIFT_DEFINITION> SHIFT_DEFINITION { get; set; }
-        public DbSet<TESTINSERTEVENTLOG> TESTINSERTEVENTLOGs { get; set; }
-        public DbSet<UPH_STANDARDS> UPH_STANDARDS { get; set; }
-        public DbSet<CURING_PIVOT_VIEW> CURING_PIVOT_VIEW { get; set; }
-        public DbSet<CURRENT_SHIFT_VIEW> CURRENT_SHIFT_VIEW { get; set; }
-        public DbSet<DOWNTIME_ORPHANS> DOWNTIME_ORPHANS { get; set; }
-        public DbSet<EVENT_CARD_LOG_VIEW> EVENT_CARD_LOG_VIEW { get; set; }
-        public DbSet<EVENT_COUNT_VIEW> EVENT_COUNT_VIEW { get; set; }
-        public DbSet<EVENT_DATA_COUNT_VIEW> EVENT_DATA_COUNT_VIEW { get; set; }
-        public DbSet<EVENT_LAST_GOODTIRE_SEC_NEW> EVENT_LAST_GOODTIRE_SEC_NEW { get; set; }
-        public DbSet<EVENT_LAST_GOODTIRE_SECONDS> EVENT_LAST_GOODTIRE_SECONDS { get; set; }
-        public DbSet<EVENT_LOG_VIEW> EVENT_LOG_VIEW { get; set; }
-        public DbSet<EVENT_LOG_VIEW_WITH_SHIFT> EVENT_LOG_VIEW_WITH_SHIFT { get; set; }
-        public DbSet<EVENT_LOG_VIEW_WITH_SHIFT_NEW> EVENT_LOG_VIEW_WITH_SHIFT_NEW { get; set; }
-        public DbSet<FINISHING_PIVOT_VIEW> FINISHING_PIVOT_VIEW { get; set; }
-        public DbSet<GTI_BUILT_VIEW> GTI_BUILT_VIEW { get; set; }
-        public DbSet<GTI_COUNT_VIEW> GTI_COUNT_VIEW { get; set; }
-        public DbSet<GTI_CURED_VIEW> GTI_CURED_VIEW { get; set; }
-        public DbSet<MACHINE_COUNT_VIEW> MACHINE_COUNT_VIEW { get; set; }
-        public DbSet<MACHINE_EVENT_COUNT_LAST_Day> MACHINE_EVENT_COUNT_LAST_Day { get; set; }
-        public DbSet<MACHINE_GOOD_TIRE_COUNT_VIEW> MACHINE_GOOD_TIRE_COUNT_VIEW { get; set; }
-        public DbSet<MACHINE_GOOD_TIRE_VIEW> MACHINE_GOOD_TIRE_VIEW { get; set; }
-        public DbSet<MACHINE_GOOD_TIRE_VIEW_NEW> MACHINE_GOOD_TIRE_VIEW_NEW { get; set; }
-        public DbSet<MACHINE_PART_VIEW> MACHINE_PART_VIEW { get; set; }
-        public DbSet<MACHINE_PART_VIEW_NEW> MACHINE_PART_VIEW_NEW { get; set; }
-        public DbSet<MACHINE_SCAN_SCORE> MACHINE_SCAN_SCORE { get; set; }
-        public DbSet<OPERATOR_GOOD_TIRE_COUNT_VIEW> OPERATOR_GOOD_TIRE_COUNT_VIEW { get; set; }
-        public DbSet<OPERATOR_GOOD_TIRE_VIEW> OPERATOR_GOOD_TIRE_VIEW { get; set; }
-        public DbSet<OPERATOR_GOOD_TIRE_VIEW_NEW> OPERATOR_GOOD_TIRE_VIEW_NEW { get; set; }
-        public DbSet<OPERATOR_PART_VIEW> OPERATOR_PART_VIEW { get; set; }
-        public DbSet<OPERATOR_PART_VIEW_NEW> OPERATOR_PART_VIEW_NEW { get; set; }
-        public DbSet<OPERATOR_PARTS_BUILD_FINISH> OPERATOR_PARTS_BUILD_FINISH { get; set; }
-        public DbSet<PART_BUILD_CURE_VIEW> PART_BUILD_CURE_VIEW { get; set; }
-        public DbSet<PART_EVENT_VIEW> PART_EVENT_VIEW { get; set; }
-        public DbSet<SAP_NOTIFICATION_LOG> SAP_NOTIFICATION_LOG { get; set; }
-        public DbSet<SHIFT_VIEW> SHIFT_VIEW { get; set; }
+        public DbSet<GTN_AND_OPERATOR> GTN_AND_OPERATOR { get; set; }
     
         public virtual int HANDLE_CURE_TIRE_LOG(Nullable<decimal> p_EVENT_LOG_ID, string p_PART_SERIAL, string p_POT)
         {

@@ -15,6 +15,7 @@ namespace DnaDunlopBarcodeWeb.ViewModels
         public string GoodyearSerialNumber { get; set; }
         public string NewGreenTireNumber { get; set; }
         public string OldGreenTireNumber { get; set; }
+        public string OldOperator { get; set; }
 
         //green tire drop list
         public SelectList GreenTireSelectList { get; set; }
@@ -30,7 +31,7 @@ namespace DnaDunlopBarcodeWeb.ViewModels
         public object GoodyearSerialNumber;
 
         [Required(ErrorMessage = "Operator Badge Number is required.")]
-        [Display(Name = "Operator Badge Number")]
+        [Display(Name = "Operator Number")]
         public object OperatorSerialNumber;
 
         [Required(ErrorMessage = "New Green Tire is required.")]

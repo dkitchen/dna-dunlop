@@ -8,7 +8,8 @@
 
 <div class="message">@Model.Message</div>
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
@@ -24,18 +25,34 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.GoodyearSerialNumber)
+            @Html.LabelFor(model => model.GoodyearSerialNumber) 
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.GoodyearSerialNumber)
+            <div id="currentGreenTireAndOperator"></div>
             @Html.ValidationMessageFor(model => model.GoodyearSerialNumber)
         </div>
+
+        @*        <div class="editor-label">
+            @Html.LabelFor(model => model.OldGreenTireNumber)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.OldGreenTireNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.OldOperator)
+        </div>
+        <div class="editor-field">
+            @Html.DisplayFor(model => model.OldOperator)
+        </div>*@
+
 
         <div class="editor-label">
             @Html.LabelFor(model => model.NewGreenTireNumber)
         </div>
         <div class="editor-field">
-            @Html.DropDownListFor(model => model.NewGreenTireNumber, Model.GreenTireSelectList, "-- select green tire --") 
+            @Html.DropDownListFor(model => model.NewGreenTireNumber, Model.GreenTireSelectList, "-- select green tire --")
             @Html.ValidationMessageFor(model => model.NewGreenTireNumber)
         </div>
 
@@ -44,6 +61,8 @@
             <input type="submit" value="Create" />
         </p>
     </fieldset>
+    
+    
 }
 
 <div>
@@ -53,3 +72,27 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#GoodyearSerialNumber").keyup(function (e) {
+            var inputVal = $("#GoodyearSerialNumber").val();
+            //alert(inputVal.length);
+            if (inputVal.length == 10) {
+
+                var partGoodyearSerial = $("#GoodyearSerialNumber").val();
+                // lookup current green tire and operator
+                $.getJSON('../api/GreenTireAndOperator/' + partGoodyearSerial, function (data) {
+                    //alert(data); //uncomment this for debug
+                    //alert (data.item1+" "+data.item2+" "+data.item3); //further debug
+                    $('#currentGreenTireAndOperator').html("<p>Green Tire Number = " + data.GREEN_TIRE_NUMBER + " Operator = " + data.OPERATOR_NAME + "</p>");
+                });
+
+            }
+            else {
+                //clear GTN and Op lookup display
+                $('#currentGreenTireAndOperator').html("<p>Green Tire Number = ?  Operator = ? </p>");
+            }
+        });
+    });
+</script>
