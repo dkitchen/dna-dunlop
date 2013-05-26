@@ -14,6 +14,12 @@ namespace DnaDunlopBarcodeWeb
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "Department",                                      
+                "{department}/{controller}/{action}/{id}",    
+                new { department = "Test", controller = "DepartmentLog", action = "Index", id = UrlParameter.Optional}
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

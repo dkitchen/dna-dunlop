@@ -138,6 +138,7 @@
     <Compile Include="Controllers\DepartmentLogController.cs" />
     <Compile Include="Controllers\GreenTireController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Rest\DepartmentDbApiController.cs" />
     <Compile Include="Controllers\Rest\EventLogSearchController.cs" />
     <Compile Include="Controllers\Rest\DepartmentLogController.cs" />
     <Compile Include="Controllers\Rest\GreenTireController.cs" />
@@ -294,6 +295,7 @@
     <Content Include="sql\INSERT_EVENT_LOG.sql" />
     <Content Include="sql\PART.sql" />
     <Content Include="sql\PART_HISTORY.sql" />
+    <Content Include="test.html" />
     <Content Include="Views\DepartmentLog\CreatePartGreenTireChange.cshtml" />
     <Content Include="Views\GreenTire\Index.cshtml" />
     <Content Include="Views\GreenTire\Details.cshtml" />

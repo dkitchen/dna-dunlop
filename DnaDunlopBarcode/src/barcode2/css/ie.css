@@ -1,4 +1,0 @@
-﻿@import url("/css/blueprint/ie.css");
-/* IE overrides - also override blueprint ie overrides*/
-body {text-align: left;}
-input, select{ vertical-align:middle;}

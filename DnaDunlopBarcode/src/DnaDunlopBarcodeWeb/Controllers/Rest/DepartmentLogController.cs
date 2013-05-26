@@ -9,18 +9,21 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 using DnaDunlopBarcodeWeb.Models;
+using System.Configuration;
 
 namespace DnaDunlopBarcodeWeb.Controllers.Rest
 {
-    public class DepartmentLogController : ApiController
+    public class DepartmentLogController : DepartmentDbApiController
     {
-        private Entities db = new Entities();
+
+        public DepartmentLogController(string department)
+            : base(department) { }
 
         // GET api/DepartmentLog
         public IEnumerable<DepartmentLog> Get()
         {
             //only get the last 100 items
-            return db.DepartmentLogs
+            return Db.DepartmentLogs
                 .OrderByDescending(i => i.Id)
                 .Take(100)
                 .AsEnumerable();
@@ -29,7 +32,7 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
         // GET api/DepartmentLog/5
         public DepartmentLog Get(decimal id)
         {
-            var log = db.DepartmentLogs.Find(id);
+            var log = Db.DepartmentLogs.Find(id);
             if (log == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
@@ -51,11 +54,11 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
 
-            db.Entry(log).State = EntityState.Modified;
+            Db.Entry(log).State = EntityState.Modified;
 
             try
             {
-                db.SaveChanges();
+                Db.SaveChanges();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -75,8 +78,8 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
                 {
                     log.CreatedOn = DateTime.Now;
                 }
-                db.DepartmentLogs.Add(log);
-                db.SaveChanges();
+                Db.DepartmentLogs.Add(log);
+                Db.SaveChanges();
 
                 HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, log);
                 response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = log.Id }));
@@ -91,17 +94,17 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
         // DELETE api/DepartmentLog/5
         public HttpResponseMessage Delete(decimal id)
         {
-            var log = db.DepartmentLogs.Find(id);
+            var log = Db.DepartmentLogs.Find(id);
             if (log == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
 
-            db.DepartmentLogs.Remove(log);
+            Db.DepartmentLogs.Remove(log);
 
             try
             {
-                db.SaveChanges();
+                Db.SaveChanges();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -113,7 +116,7 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            Db.Dispose();
             base.Dispose(disposing);
         }
     }

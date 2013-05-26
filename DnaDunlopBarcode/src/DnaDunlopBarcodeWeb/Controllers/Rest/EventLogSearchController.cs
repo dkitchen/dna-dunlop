@@ -14,13 +14,13 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
 {
     public class EventLogSearchController : ApiController
     {
-        private Entities db = new Entities();
+        private Entities _db = new Entities();
 
         // GET api/DepartmentLog
         public IEnumerable<DepartmentLog> Get()
         {
             //only get the last 100 items
-            return db.DepartmentLogs
+            return _db.DepartmentLogs
                 .OrderByDescending(i => i.Id)
                 .Take(100)
                 .AsEnumerable();
@@ -29,7 +29,7 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
         // GET api/DepartmentLog/5
         public DepartmentLog Get(decimal id)
         {
-            var log = db.DepartmentLogs.Find(id);
+            var log = _db.DepartmentLogs.Find(id);
             if (log == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
@@ -51,11 +51,11 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
 
-            db.Entry(log).State = EntityState.Modified;
+            _db.Entry(log).State = EntityState.Modified;
 
             try
             {
-                db.SaveChanges();
+                _db.SaveChanges();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -75,8 +75,8 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
                 {
                     log.CreatedOn = DateTime.Now;
                 }
-                db.DepartmentLogs.Add(log);
-                db.SaveChanges();
+                _db.DepartmentLogs.Add(log);
+                _db.SaveChanges();
 
                 HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, log);
                 response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = log.Id }));
@@ -91,17 +91,17 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
         // DELETE api/DepartmentLog/5
         public HttpResponseMessage Delete(decimal id)
         {
-            var log = db.DepartmentLogs.Find(id);
+            var log = _db.DepartmentLogs.Find(id);
             if (log == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
 
-            db.DepartmentLogs.Remove(log);
+            _db.DepartmentLogs.Remove(log);
 
             try
             {
-                db.SaveChanges();
+                _db.SaveChanges();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -113,7 +113,7 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            _db.Dispose();
             base.Dispose(disposing);
         }
     }

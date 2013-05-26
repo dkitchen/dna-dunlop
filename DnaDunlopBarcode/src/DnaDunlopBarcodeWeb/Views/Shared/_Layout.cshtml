@@ -21,12 +21,13 @@
                     </section>*@
                     <nav>
                         <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Select Dept", "Index", "Home")</li>
                             @*<li>@Html.ActionLink("About", "About", "Home")</li>
                             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-                            <li>@Html.ActionLink("Department Log", "Index", "DepartmentLog")</li>
+                            <li>@Html.ActionLink("Log", "Index", "DepartmentLog")</li>
                             <li>@Html.ActionLink("Change Green Tire", "CreatePartGreenTireChange", "DepartmentLog")</li>
-                            <li>@Html.ActionLink("Change Serial Number", "CreatePartSerialNumberChange", "DepartmentLog")</li>
+                            <li>@Html.ActionLink("Change Serial", "CreatePartSerialNumberChange", "DepartmentLog")</li>
+                            <li><a href="http://tonsf010/barcode2/">Barcode Home</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -41,7 +42,7 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - Dunlop Tire Corporation</p>
+                    <p>&copy; @DateTime.Now.Year - Goodyear Dunlop Tires North America</p>
                 </div>
             </div>
         </footer>

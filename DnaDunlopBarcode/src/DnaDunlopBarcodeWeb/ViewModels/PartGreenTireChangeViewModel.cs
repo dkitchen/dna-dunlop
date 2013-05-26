@@ -11,6 +11,7 @@ namespace DnaDunlopBarcodeWeb.ViewModels
     [MetadataType(typeof(PartGreenTireChangeViewModelMetadata))]
     public class PartGreenTireChangeViewModel
     {
+        public string DepartmentName { get; set; }
         public string OperatorSerialNumber { get; set; }
         public string GoodyearSerialNumber { get; set; }
         public string NewGreenTireNumber { get; set; }

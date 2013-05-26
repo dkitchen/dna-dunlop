@@ -9,17 +9,20 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 using DnaDunlopBarcodeWeb.Models;
+using System.Configuration;
 
 namespace DnaDunlopBarcodeWeb.Controllers.Rest
 {
-    public class GreenTireController : ApiController
+    public class GreenTireController : DepartmentDbApiController
     {
-        private Entities db = new Entities();
+
+        public GreenTireController(string department)
+            : base(department) { }
 
         // GET api/GreenTire
         public IEnumerable<string> GetGreenTires()
         {
-            return db.GreenTires
+            return Db.GreenTires
                 .Select(i=>i.GreenTireNumber)
                 .Distinct()
                 .OrderBy(i => i)
@@ -29,7 +32,7 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
         // GET api/GreenTire/5
         public GreenTire GetGreenTire(decimal id)
         {
-            GreenTire greentire = db.GreenTires.Find(id);
+            GreenTire greentire = Db.GreenTires.Find(id);
             if (greentire == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
@@ -51,11 +54,11 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
 
-            db.Entry(greentire).State = EntityState.Modified;
+            Db.Entry(greentire).State = EntityState.Modified;
 
             try
             {
-                db.SaveChanges();
+                Db.SaveChanges();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -70,8 +73,8 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
         {
             if (ModelState.IsValid)
             {
-                db.GreenTires.Add(greentire);
-                db.SaveChanges();
+                Db.GreenTires.Add(greentire);
+                Db.SaveChanges();
 
                 HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, greentire);
                 response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = greentire.Id }));
@@ -86,17 +89,17 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
         // DELETE api/GreenTire/5
         public HttpResponseMessage DeleteGreenTire(decimal id)
         {
-            GreenTire greentire = db.GreenTires.Find(id);
+            GreenTire greentire = Db.GreenTires.Find(id);
             if (greentire == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
 
-            db.GreenTires.Remove(greentire);
+            Db.GreenTires.Remove(greentire);
 
             try
             {
-                db.SaveChanges();
+                Db.SaveChanges();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -108,7 +111,7 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            Db.Dispose();
             base.Dispose(disposing);
         }
     }

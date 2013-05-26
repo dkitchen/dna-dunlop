@@ -11,14 +11,14 @@ namespace DnaDunlopBarcodeWeb.Controllers
 {
     public class GreenTireController : Controller
     {
-        private Entities db = new Entities();
+        private Entities _db = new Entities();
 
         //
         // GET: /GreenTire/
 
         public ActionResult Index()
         {
-            return View(db.GreenTires.ToList());
+            return View(_db.GreenTires.ToList());
         }
 
         //
@@ -26,7 +26,7 @@ namespace DnaDunlopBarcodeWeb.Controllers
 
         public ActionResult Details(decimal id = 0)
         {
-            GreenTire greentire = db.GreenTires.Find(id);
+            GreenTire greentire = _db.GreenTires.Find(id);
             if (greentire == null)
             {
                 return HttpNotFound();
@@ -51,8 +51,8 @@ namespace DnaDunlopBarcodeWeb.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.GreenTires.Add(greentire);
-                db.SaveChanges();
+                _db.GreenTires.Add(greentire);
+                _db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -64,7 +64,7 @@ namespace DnaDunlopBarcodeWeb.Controllers
 
         public ActionResult Edit(decimal id = 0)
         {
-            GreenTire greentire = db.GreenTires.Find(id);
+            GreenTire greentire = _db.GreenTires.Find(id);
             if (greentire == null)
             {
                 return HttpNotFound();
@@ -81,8 +81,8 @@ namespace DnaDunlopBarcodeWeb.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(greentire).State = EntityState.Modified;
-                db.SaveChanges();
+                _db.Entry(greentire).State = EntityState.Modified;
+                _db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(greentire);
@@ -93,7 +93,7 @@ namespace DnaDunlopBarcodeWeb.Controllers
 
         public ActionResult Delete(decimal id = 0)
         {
-            GreenTire greentire = db.GreenTires.Find(id);
+            GreenTire greentire = _db.GreenTires.Find(id);
             if (greentire == null)
             {
                 return HttpNotFound();
@@ -108,15 +108,15 @@ namespace DnaDunlopBarcodeWeb.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(decimal id)
         {
-            GreenTire greentire = db.GreenTires.Find(id);
-            db.GreenTires.Remove(greentire);
-            db.SaveChanges();
+            GreenTire greentire = _db.GreenTires.Find(id);
+            _db.GreenTires.Remove(greentire);
+            _db.SaveChanges();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            _db.Dispose();
             base.Dispose(disposing);
         }
     }

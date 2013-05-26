@@ -14,18 +14,18 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
 {
     public class PartController : ApiController
     {
-        private Entities db = new Entities();
+        private Entities _db = new Entities();
 
         // GET api/Part
         public IEnumerable<Part> GetParts()
         {
-            return db.Parts.AsEnumerable();
+            return _db.Parts.AsEnumerable();
         }
 
         // GET api/Part/5
         public Part GetPart(decimal id)
         {
-            Part part = db.Parts.Find(id);
+            Part part = _db.Parts.Find(id);
             if (part == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
@@ -47,11 +47,11 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
 
-            db.Entry(part).State = EntityState.Modified;
+            _db.Entry(part).State = EntityState.Modified;
 
             try
             {
-                db.SaveChanges();
+                _db.SaveChanges();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -66,8 +66,8 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
         {
             if (ModelState.IsValid)
             {
-                db.Parts.Add(part);
-                db.SaveChanges();
+                _db.Parts.Add(part);
+                _db.SaveChanges();
 
                 HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, part);
                 response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = part.Id }));
@@ -82,17 +82,17 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
         // DELETE api/Part/5
         public HttpResponseMessage DeletePart(decimal id)
         {
-            Part part = db.Parts.Find(id);
+            Part part = _db.Parts.Find(id);
             if (part == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
 
-            db.Parts.Remove(part);
+            _db.Parts.Remove(part);
 
             try
             {
-                db.SaveChanges();
+                _db.SaveChanges();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -104,7 +104,7 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            _db.Dispose();
             base.Dispose(disposing);
         }
     }

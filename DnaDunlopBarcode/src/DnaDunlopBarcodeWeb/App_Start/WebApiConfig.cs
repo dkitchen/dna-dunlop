@@ -9,6 +9,13 @@ namespace DnaDunlopBarcodeWeb
     {
         public static void Register(HttpConfiguration config)
         {
+
+            config.Routes.MapHttpRoute(
+                name: "DepartmentApi",
+                routeTemplate: "{department}/api/{controller}/{id}",
+                defaults: new { department = "Test", id = RouteParameter.Optional }
+            );
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",

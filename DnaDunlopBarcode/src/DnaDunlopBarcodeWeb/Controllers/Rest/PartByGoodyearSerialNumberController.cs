@@ -11,12 +11,12 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
     public class PartByGoodyearSerialNumberController : ApiController
     {
 
-        private Entities db = new Entities();
+        private Entities _db = new Entities();
 
         // GET api/Part/5
         public Part GetPart(string goodyearSerialNumber)
         {
-            Part part = db.Parts
+            Part part = _db.Parts
                 .FirstOrDefault(i=>i.GoodyearSerialNumber == goodyearSerialNumber);
             if (part == null)
             {

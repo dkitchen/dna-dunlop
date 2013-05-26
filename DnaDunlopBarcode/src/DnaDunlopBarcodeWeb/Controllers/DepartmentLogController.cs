@@ -11,21 +11,24 @@ namespace DnaDunlopBarcodeWeb.Controllers
     public class DepartmentLogController : Controller
     {
 
-        Rest.DepartmentLogController _departmentLogApi = new Rest.DepartmentLogController();
-        Rest.GreenTireController _greenTireApi = new Rest.GreenTireController();
         Rest.PartByGoodyearSerialNumberController _partByGoodyearSerialNumberApi = new Rest.PartByGoodyearSerialNumberController();
 
-        public ActionResult Index()
+        public ActionResult Index(string department)
         {
             var viewModel = new DepartmentLogViewModel();
-            viewModel.DepartmentLogs = _departmentLogApi.Get().ToList();    //materializing
+            viewModel.DepartmentName = department;
+            var api = new Rest.DepartmentLogController(department);
+
+            viewModel.DepartmentLogs = api.Get().ToList();    //materializing
             return View(viewModel);
         }
 
-        public ActionResult Details(long id)
+        public ActionResult Details(string department, long id)
         {
-            var log = _departmentLogApi.Get(id);
+            var api = new Rest.DepartmentLogController(department);
+            var log = api.Get(id);
             var viewModel = new DepartmentLogViewModel();
+            viewModel.DepartmentName = department;
             viewModel.SelectedDepartmentLog = log;
 
             return View(viewModel);
@@ -33,24 +36,25 @@ namespace DnaDunlopBarcodeWeb.Controllers
 
         // GET: /DepartmentLog/Create
 
-        public ActionResult Create()
-        {
-            var viewModel = new DepartmentLogViewModel();
-            return View(viewModel);
-        }
+        //public ActionResult Create()
+        //{
+        //    var viewModel = new DepartmentLogViewModel();
+        //    return View(viewModel);
+        //}
 
         //
         // POST: /DepartmentLog/Create
 
         [HttpPost]
-        public ActionResult Create(DepartmentLogViewModel viewModel)
+        public ActionResult Create(string department, DepartmentLogViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _departmentLogApi.InitializePost();
-                    _departmentLogApi.Post(viewModel.SelectedDepartmentLog);
+                    var api = new Rest.DepartmentLogController(department);
+                    api.InitializePost();
+                    api.Post(viewModel.SelectedDepartmentLog);
 
                     return RedirectToAction("Index");
                 }
@@ -63,17 +67,19 @@ namespace DnaDunlopBarcodeWeb.Controllers
             return View(viewModel);
         }
 
-        public ActionResult CreatePartGreenTireChange()
+        public ActionResult CreatePartGreenTireChange(string department)
         {
             var viewModel = new PartGreenTireChangeViewModel();
+            viewModel.DepartmentName = department;
             viewModel.Message = null;
-            viewModel.GreenTireSelectList = new SelectList(_greenTireApi.GetGreenTires());
+            var api = new Rest.GreenTireController(department);
+            viewModel.GreenTireSelectList = new SelectList(api.GetGreenTires());
             return View(viewModel);
         }
 
 
         [HttpPost]
-        public ActionResult CreatePartGreenTireChange(PartGreenTireChangeViewModel viewModel)
+        public ActionResult CreatePartGreenTireChange(string department, PartGreenTireChangeViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
@@ -88,12 +94,12 @@ namespace DnaDunlopBarcodeWeb.Controllers
                     //DANGER!! Don't allow a new 15 digit part serial to get assigned here or it will create a 
                     //  brand new part row - will metadata catch it?
                     log.OperatorSerialNumber = viewModel.OperatorSerialNumber;
-                    log.PartSerialNumber = viewModel.GoodyearSerialNumber;                    
+                    log.PartSerialNumber = viewModel.GoodyearSerialNumber;
                     log.DataName1 = "NewGreenTireNumber";
                     log.DataValue1 = viewModel.NewGreenTireNumber;
-                    
-                    _departmentLogApi.InitializePost();
-                    _departmentLogApi.Post(log);
+                    var api = new Rest.DepartmentLogController(department);
+                    api.InitializePost();
+                    api.Post(log);
 
                     //return RedirectToAction("Index");
                     viewModel.Message = "Green Tire Number Changed!";
@@ -103,21 +109,22 @@ namespace DnaDunlopBarcodeWeb.Controllers
                     viewModel.Message = ex.Message;
                 }
             }
-
-            viewModel.GreenTireSelectList = new SelectList(_greenTireApi.GetGreenTires());
+            var greenTireApi = new Rest.GreenTireController(department);
+            viewModel.GreenTireSelectList = new SelectList(greenTireApi.GetGreenTires());
             return View(viewModel);
         }
 
-        public ActionResult CreatePartSerialNumberChange()
+        public ActionResult CreatePartSerialNumberChange(string department)
         {
             var viewModel = new PartSerialNumberChangeViewModel();
+            viewModel.DepartmentName = department;
             viewModel.Message = null;
             return View(viewModel);
         }
 
 
         [HttpPost]
-        public ActionResult CreatePartSerialNumberChange(PartSerialNumberChangeViewModel viewModel)
+        public ActionResult CreatePartSerialNumberChange(string department, PartSerialNumberChangeViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
@@ -133,9 +140,9 @@ namespace DnaDunlopBarcodeWeb.Controllers
                     log.PartSerialNumber = viewModel.OldGoodyearSerialNumber;
                     log.DataName1 = "NewGoodyearSerialNumber";
                     log.DataValue1 = viewModel.NewGoodyearSerialNumber;
-
-                    _departmentLogApi.InitializePost();
-                    _departmentLogApi.Post(log);
+                    var api = new Rest.DepartmentLogController(department);
+                    api.InitializePost();
+                    api.Post(log);
 
                     return RedirectToAction("Index");
                 }
