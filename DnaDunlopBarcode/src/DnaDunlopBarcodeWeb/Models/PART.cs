@@ -17,6 +17,7 @@ namespace DnaDunlopBarcodeWeb.Models
         public Part()
         {
             this.EventLog = new HashSet<EVENT_LOG>();
+            this.PART_HISTORY = new HashSet<PART_HISTORY>();
         }
     
         public decimal Id { get; set; }
@@ -26,5 +27,6 @@ namespace DnaDunlopBarcodeWeb.Models
         public System.DateTime CreatedOn { get; set; }
     
         public virtual ICollection<EVENT_LOG> EventLog { get; set; }
+        public virtual ICollection<PART_HISTORY> PART_HISTORY { get; set; }
     }
 }

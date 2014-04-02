@@ -42,6 +42,7 @@ namespace DnaDunlopBarcodeWeb.Models
         public DbSet<Part> Parts { get; set; }
         public DbSet<SHIFT> SHIFTs { get; set; }
         public DbSet<GTN_AND_OPERATOR> GTN_AND_OPERATOR { get; set; }
+        public DbSet<PART_HISTORY> PART_HISTORY { get; set; }
     
         public virtual int HANDLE_CURE_TIRE_LOG(Nullable<decimal> p_EVENT_LOG_ID, string p_PART_SERIAL, string p_POT)
         {

@@ -8,6 +8,10 @@ using System.Web.Http;
 
 namespace DnaDunlopBarcodeWeb.Controllers.Rest
 {
+    /// <summary>
+    /// This ApiController enables connecting to different databases depending on which department was selected.
+    /// Other Api Controllers can inherit this ability
+    /// </summary>
     public class DepartmentDbApiController : ApiController
     {
         private Entities _db;
@@ -17,10 +21,13 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
         {
             _department = department;
             _db = new Entities();
-            _db.Database.Connection.ConnectionString
-                = ConfigurationManager.ConnectionStrings.Cast<ConnectionStringSettings>()
+            string connString = ConfigurationManager.ConnectionStrings.Cast<ConnectionStringSettings>()
                 .FirstOrDefault(i => i.Name.ToUpper().StartsWith(department.ToUpper()))
                 .ConnectionString;
+
+            _db.Database.Connection.ConnectionString
+                = connString;
+
         }
         
         protected Entities Db

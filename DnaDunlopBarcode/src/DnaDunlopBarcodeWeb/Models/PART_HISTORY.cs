@@ -12,12 +12,15 @@ namespace DnaDunlopBarcodeWeb.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class GreenTire
+    public partial class PART_HISTORY
     {
-        public decimal Id { get; set; }
-        public string GreenTireNumber { get; set; }
-        public string SKU { get; set; }
-        public string TireCode { get; set; }
-        public Nullable<decimal> CONVEYOR_CODE { get; set; }
+        public decimal PART_HISTORY_ID { get; set; }
+        public decimal PART_ID { get; set; }
+        public string SERIAL_NUMBER { get; set; }
+        public string GOODYEAR_SERIAL_NUMBER { get; set; }
+        public string GREEN_TIRE_NUMBER { get; set; }
+        public System.DateTime CREATED_ON { get; set; }
+    
+        public virtual Part PART { get; set; }
     }
 }

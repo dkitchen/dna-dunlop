@@ -23,6 +23,8 @@
         <AssociationConnector Association="Model.EVENT_LOG_FK_PART" ManuallyRouted="false" />
         <AssociationConnector Association="Model.EVENT_LOG_OPERATOR" ManuallyRouted="false" />
         <EntityTypeShape EntityType="Model.GTN_AND_OPERATOR" Width="1.5" PointX="7" PointY="9.375" />
+        <EntityTypeShape EntityType="Model.PART_HISTORY" Width="1.5" PointX="5.0706777782508539" PointY="29.937128170364129" />
+        <AssociationConnector Association="Model.PART_HISTORY_PART_FK1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

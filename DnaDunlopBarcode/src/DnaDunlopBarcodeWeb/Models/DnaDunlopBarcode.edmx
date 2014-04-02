@@ -1,24 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?><edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+﻿<?xml version="1.0" encoding="utf-8"?><!----><edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="ModelStoreContainer">
-          <EntitySet Name="DEPARTMENT" EntityType="Model.Store.DEPARTMENT" store:Type="Tables" Schema="MRT" />
-          <EntitySet Name="DEPARTMENT_LOG" EntityType="Model.Store.DEPARTMENT_LOG" store:Type="Tables" Schema="MRT" />
-          <EntitySet Name="EVENT" EntityType="Model.Store.EVENT" store:Type="Tables" Schema="MRT" />
-          <EntitySet Name="EVENT_DATA" EntityType="Model.Store.EVENT_DATA" store:Type="Tables" Schema="MRT" />
-          <EntitySet Name="EVENT_LOG" EntityType="Model.Store.EVENT_LOG" store:Type="Tables" Schema="MRT" />
-          <EntitySet Name="EVENT_LOG_DATA" EntityType="Model.Store.EVENT_LOG_DATA" store:Type="Tables" Schema="MRT" />
-          <EntitySet Name="EVENT_LOG_SHIFT" EntityType="Model.Store.EVENT_LOG_SHIFT" store:Type="Tables" Schema="MRT" />
-          <EntitySet Name="GREEN_TIRE" EntityType="Model.Store.GREEN_TIRE" store:Type="Tables" Schema="MRT" />
-          <EntitySet Name="GTI_EXPORT_BUILT" EntityType="Model.Store.GTI_EXPORT_BUILT" store:Type="Tables" Schema="MRT" />
-          <EntitySet Name="MACHINE" EntityType="Model.Store.MACHINE" store:Type="Tables" Schema="MRT" />
-          <EntitySet Name="OPERATOR" EntityType="Model.Store.OPERATOR" store:Type="Tables" Schema="MRT" />
-          <EntitySet Name="PART" EntityType="Model.Store.PART" store:Type="Tables" Schema="MRT" />
-          <EntitySet Name="SHIFT" EntityType="Model.Store.SHIFT" store:Type="Tables" Schema="MRT" />
-          <EntitySet Name="GTN_AND_OPERATOR" EntityType="Model.Store.GTN_AND_OPERATOR" store:Type="Views" store:Schema="MRT" store:Name="GTN_AND_OPERATOR">
+          <EntitySet Name="DEPARTMENT" EntityType="Model.Store.DEPARTMENT" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="DEPARTMENT_LOG" EntityType="Model.Store.DEPARTMENT_LOG" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="EVENT" EntityType="Model.Store.EVENT" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="EVENT_DATA" EntityType="Model.Store.EVENT_DATA" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="EVENT_LOG" EntityType="Model.Store.EVENT_LOG" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="EVENT_LOG_DATA" EntityType="Model.Store.EVENT_LOG_DATA" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="EVENT_LOG_SHIFT" EntityType="Model.Store.EVENT_LOG_SHIFT" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="GREEN_TIRE" EntityType="Model.Store.GREEN_TIRE" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="GTI_EXPORT_BUILT" EntityType="Model.Store.GTI_EXPORT_BUILT" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="MACHINE" EntityType="Model.Store.MACHINE" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="OPERATOR" EntityType="Model.Store.OPERATOR" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="PART" EntityType="Model.Store.PART" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="PART_HISTORY" EntityType="Model.Store.PART_HISTORY" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SHIFT" EntityType="Model.Store.SHIFT" store:Type="Tables" Schema="MRT" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="GTN_AND_OPERATOR" EntityType="Model.Store.GTN_AND_OPERATOR" store:Type="Views" store:Schema="MRT" store:Name="GTN_AND_OPERATOR" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
             <DefiningQuery>SELECT 
       "GTN_AND_OPERATOR"."GOODYEAR_SERIAL_NUMBER" AS "GOODYEAR_SERIAL_NUMBER", 
       "GTN_AND_OPERATOR"."GREEN_TIRE_NUMBER" AS "GREEN_TIRE_NUMBER", 
@@ -41,6 +42,10 @@
           <AssociationSet Name="EVENT_LOG_OPERATOR" Association="Model.Store.EVENT_LOG_OPERATOR">
             <End Role="OPERATOR" EntitySet="OPERATOR" />
             <End Role="EVENT_LOG" EntitySet="EVENT_LOG" />
+          </AssociationSet>
+          <AssociationSet Name="PART_HISTORY_PART_FK1" Association="Model.Store.PART_HISTORY_PART_FK1">
+            <End Role="PART" EntitySet="PART" />
+            <End Role="PART_HISTORY" EntitySet="PART_HISTORY" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="DEPARTMENT">
@@ -157,6 +162,7 @@
           <Property Name="GREEN_TIRE_NUMBER" Type="varchar2" Nullable="false" MaxLength="20" />
           <Property Name="SKU" Type="varchar2" MaxLength="20" />
           <Property Name="TIRE_CODE" Type="varchar2" MaxLength="5" />
+          <Property Name="CONVEYOR_CODE" Type="number" />
         </EntityType>
         <EntityType Name="GTI_EXPORT_BUILT">
           <Key>
@@ -194,6 +200,7 @@
           <Property Name="DESCRIPTION" Type="nvarchar2" MaxLength="500" />
           <Property Name="EMPLOYEE_NUMBER" Type="varchar2" Nullable="false" MaxLength="10" />
           <Property Name="GOODYEAR_PERSONNEL_NUMBER" Type="varchar2" MaxLength="50" />
+          <Property Name="PAY_CLASS" Type="varchar2" MaxLength="1" />
         </EntityType>
         <EntityType Name="PART">
           <Key>
@@ -205,6 +212,17 @@
           <Property Name="GOODYEAR_SERIAL_NUMBER" Type="varchar2" MaxLength="50" />
           <Property Name="CREATED" Type="date" Nullable="false" />
         </EntityType>
+        <EntityType Name="PART_HISTORY">
+          <Key>
+            <PropertyRef Name="PART_HISTORY_ID" />
+          </Key>
+          <Property Name="PART_HISTORY_ID" Type="number" Nullable="false" />
+          <Property Name="PART_ID" Type="number" Nullable="false" />
+          <Property Name="SERIAL_NUMBER" Type="varchar2" Nullable="false" MaxLength="15" />
+          <Property Name="GOODYEAR_SERIAL_NUMBER" Type="varchar2" Nullable="false" MaxLength="10" />
+          <Property Name="GREEN_TIRE_NUMBER" Type="varchar2" Nullable="false" MaxLength="5" />
+          <Property Name="CREATED_ON" Type="date" Nullable="false" />
+        </EntityType>
         <EntityType Name="SHIFT">
           <Key>
             <PropertyRef Name="START_DATE_TIME" />
@@ -212,36 +230,6 @@
           <Property Name="START_DATE_TIME" Type="date" Nullable="false" />
           <Property Name="SHIFT" Type="varchar2" Nullable="false" MaxLength="10" />
         </EntityType>
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.CURING_PIVOT_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.CURRENT_SHIFT_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.EVENT_CARD_LOG_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.EVENT_COUNT_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.EVENT_DATA_COUNT_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.EVENT_LOG_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.EVENT_LOG_VIEW_WITH_SHIFT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.FINISHING_PIVOT_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.GTI_BUILT_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.GTI_CURED_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
         <!--Errors Found During Generation:
       warning 6002: The table/view 'MRT.GTN_AND_OPERATOR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
@@ -254,48 +242,6 @@
           <Property Name="OPERATOR_NAME" Type="nvarchar2" MaxLength="200" />
           <Property Name="OPERATOR_SERIAL_NUMBER" Type="varchar2" Nullable="false" MaxLength="128" />
         </EntityType>
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.MACHINE_COUNT_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.MACHINE_EVENT_COUNT_LAST_Day' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.MACHINE_GOOD_TIRE_COUNT_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.MACHINE_GOOD_TIRE_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.MACHINE_PART_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.MACHINE_SCAN_SCORE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.OPERATOR_GOOD_TIRE_COUNT_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.OPERATOR_GOOD_TIRE_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.OPERATOR_PART_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.OPERATOR_PARTS_BUILD_FINISH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.PART_BUILD_CURE_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.PART_EVENT_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.SAP_NOTIFICATION_LOG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'MRT.SHIFT_VIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
         <Association Name="EVENT_LOG_FK_EVENT">
           <End Role="EVENT" Type="Model.Store.EVENT" Multiplicity="1" />
           <End Role="EVENT_LOG" Type="Model.Store.EVENT_LOG" Multiplicity="*" />
@@ -341,6 +287,18 @@
             </Principal>
             <Dependent Role="EVENT_LOG">
               <PropertyRef Name="OPERATOR_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PART_HISTORY_PART_FK1">
+          <End Role="PART" Type="Model.Store.PART" Multiplicity="1" />
+          <End Role="PART_HISTORY" Type="Model.Store.PART_HISTORY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PART">
+              <PropertyRef Name="PART_ID" />
+            </Principal>
+            <Dependent Role="PART_HISTORY">
+              <PropertyRef Name="PART_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -487,11 +445,12 @@
           <Parameter Name="P_SKU" Type="varchar2" Mode="In" />
         </Function>
         <!--Errors Found During Generation:
-      warning 6013: The table/view 'MRT.GTI_COUNT_VIEW' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      warning 6013: The table/view 'MRT.ERROR_LOG' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
       
-      <EntityType Name="GTI_COUNT_VIEW">
-        <Property Name="GREEN_TIRE_NUMBER" Type="varchar2" MaxLength="50" />
-        <Property Name="COUNT" Type="number" />
+      <EntityType Name="ERROR_LOG">
+        <Property Name="CREATED_ON" Type="date" />
+        <Property Name="ERROR_NUMBER" Type="number" />
+        <Property Name="ERROR_MESSAGE" Type="varchar2" MaxLength="500" />
       </EntityType>-->
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -724,6 +683,11 @@
             <Parameter Name="P_SKU" Mode="In" Type="String" />
           </FunctionImport>
           <EntitySet Name="GTN_AND_OPERATOR" EntityType="Model.GTN_AND_OPERATOR" />
+          <EntitySet Name="PART_HISTORY" EntityType="Model.PART_HISTORY" />
+          <AssociationSet Name="PART_HISTORY_PART_FK1" Association="Model.PART_HISTORY_PART_FK1">
+            <End Role="Part" EntitySet="Parts" />
+            <End Role="PART_HISTORY" EntitySet="PART_HISTORY" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="DEPARTMENT">
           <Key>
@@ -844,6 +808,7 @@
           <Property Name="GreenTireNumber" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
           <Property Name="SKU" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
           <Property Name="TireCode" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Type="Decimal" Name="CONVEYOR_CODE" Precision="38" Scale="0" />
         </EntityType>
         <EntityType Name="GTI_EXPORT_BUILT">
           <Key>
@@ -883,6 +848,7 @@
           <Property Name="EMPLOYEE_NUMBER" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
           <Property Name="GOODYEAR_PERSONNEL_NUMBER" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="EVENT_LOG" Relationship="Model.EVENT_LOG_OPERATOR" FromRole="OPERATOR" ToRole="EVENT_LOG" />
+          <Property Type="String" Name="PAY_CLASS" MaxLength="1" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Part">
           <Key>
@@ -894,6 +860,7 @@
           <Property Name="GoodyearSerialNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="EventLog" Relationship="Model.EVENT_LOG_FK_PART" FromRole="PART" ToRole="EVENT_LOG" />
+          <NavigationProperty Name="PART_HISTORY" Relationship="Model.PART_HISTORY_PART_FK1" FromRole="Part" ToRole="PART_HISTORY" />
         </EntityType>
         <EntityType Name="SHIFT">
           <Key>
@@ -950,7 +917,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <ComplexType Name="GreenTireAndOperator" >
+        <ComplexType Name="GreenTireAndOperator">
           <Property Type="String" Name="GreenTireNumber" Nullable="false" />
           <Property Type="String" Name="Operator" Nullable="false" />
         </ComplexType>
@@ -963,6 +930,30 @@
           <Property Type="String" Name="OPERATOR_NAME" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="OPERATOR_SERIAL_NUMBER" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="PART_HISTORY">
+          <Key>
+            <PropertyRef Name="PART_HISTORY_ID" />
+          </Key>
+          <Property Type="Decimal" Name="PART_HISTORY_ID" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="PART_ID" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="String" Name="SERIAL_NUMBER" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GOODYEAR_SERIAL_NUMBER" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GREEN_TIRE_NUMBER" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CREATED_ON" Nullable="false" />
+          <NavigationProperty Name="PART" Relationship="Model.PART_HISTORY_PART_FK1" FromRole="PART_HISTORY" ToRole="Part" />
+        </EntityType>
+        <Association Name="PART_HISTORY_PART_FK1">
+          <End Type="Model.Part" Role="Part" Multiplicity="1" />
+          <End Type="Model.PART_HISTORY" Role="PART_HISTORY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Part">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PART_HISTORY">
+              <PropertyRef Name="PART_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1085,6 +1076,7 @@
           <EntitySetMapping Name="GreenTires">
             <EntityTypeMapping TypeName="Model.GreenTire">
               <MappingFragment StoreEntitySet="GREEN_TIRE">
+                <ScalarProperty Name="CONVEYOR_CODE" ColumnName="CONVEYOR_CODE" />
                 <ScalarProperty Name="Id" ColumnName="GREEN_TIRE_ID" />
                 <ScalarProperty Name="GreenTireNumber" ColumnName="GREEN_TIRE_NUMBER" />
                 <ScalarProperty Name="SKU" ColumnName="SKU" />
@@ -1123,6 +1115,7 @@
           <EntitySetMapping Name="OPERATORs">
             <EntityTypeMapping TypeName="Model.OPERATOR">
               <MappingFragment StoreEntitySet="OPERATOR">
+                <ScalarProperty Name="PAY_CLASS" ColumnName="PAY_CLASS" />
                 <ScalarProperty Name="OPERATOR_ID" ColumnName="OPERATOR_ID" />
                 <ScalarProperty Name="SERIAL_NUMBER" ColumnName="SERIAL_NUMBER" />
                 <ScalarProperty Name="NAME" ColumnName="NAME" />
@@ -1171,27 +1164,39 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="PART_HISTORY">
+            <EntityTypeMapping TypeName="Model.PART_HISTORY">
+              <MappingFragment StoreEntitySet="PART_HISTORY">
+                <ScalarProperty Name="CREATED_ON" ColumnName="CREATED_ON" />
+                <ScalarProperty Name="GREEN_TIRE_NUMBER" ColumnName="GREEN_TIRE_NUMBER" />
+                <ScalarProperty Name="GOODYEAR_SERIAL_NUMBER" ColumnName="GOODYEAR_SERIAL_NUMBER" />
+                <ScalarProperty Name="SERIAL_NUMBER" ColumnName="SERIAL_NUMBER" />
+                <ScalarProperty Name="PART_ID" ColumnName="PART_ID" />
+                <ScalarProperty Name="PART_HISTORY_ID" ColumnName="PART_HISTORY_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
-    <Connection>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
-      </DesignerInfoPropertySet>
-    </Connection>
-    <Options>
-      <DesignerInfoPropertySet>
-        <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="True" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
-        <DesignerProperty Name="DefaultDatabaseSchema" Value="ORACLE" />
-      </DesignerInfoPropertySet>
-    </Options>
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="True" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <edmx:DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <edmx:DesignerProperty Name="DefaultDatabaseSchema" Value="ORACLE" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams />
-  </Designer>
+    <edmx:Diagrams />
+  </edmx:Designer>
 </edmx:Edmx>
