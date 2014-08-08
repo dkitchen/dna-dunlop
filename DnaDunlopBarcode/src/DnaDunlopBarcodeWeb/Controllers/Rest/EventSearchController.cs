@@ -80,20 +80,21 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
             };
 
             //TEST
-            var goodTireEvents = GetEvents()
-                .Where(i => i.EventName == "GoodTire"
-                    && i.EventCreatedOn > beginDate
-                    && i.EventCreatedOn < endDate)
-                .ToList();
+            //var goodTireEvents = GetEvents()
+            //    .Where(i => i.EventName == "GoodTire"
+            //        && i.EventCreatedOn > beginDate
+            //        && i.EventCreatedOn < endDate)
+            //    .ToList();
 
             var events = GetEvents()
                 .Where(i => FifteenDigitBarcodes.Contains(i.PartLabel)
                 && eventNames.Contains(i.EventName))
                 .ToList();
+
             //TEST
-            goodTireEvents = events
-                .Where(i => i.EventName == "GoodTire")
-                .ToList();
+            //goodTireEvents = events
+            //    .Where(i => i.EventName == "GoodTire")
+            //    .ToList();
 
             var dummyBarcodeEvents = GetEvents()
                 .Where(i => LessThanFifteenDigitBarcodes.Contains(i.PartLabel)

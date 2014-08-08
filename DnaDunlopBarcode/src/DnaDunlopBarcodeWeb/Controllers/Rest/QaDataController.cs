@@ -70,7 +70,7 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
                 qaItem.MoldNum = GetDataValue(cureEvents, "MoldNum");
 
                 var runoutEvents = GetEvents(eventItems, "RunoutComplete");
-                var firstRounoutEvent = runoutEvents.FirstOrDefault();
+                var firstRounoutEvent = runoutEvents.FirstOrDefault();   //this actually the last event since GetEvents is sorted by latest
                 if(firstRounoutEvent !=null)
                 {
 
@@ -121,7 +121,7 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
         {
             var itemsByEventName = items
                 .Where(i => string.Format("{0}", i.EventName).Trim().ToLower() == string.Format("{0}", eventName).Trim().ToLower())
-                .OrderBy(i => i.EventSearchResultId);
+                .OrderByDescending(i => i.EventSearchResultId); //switched to orderByDescending on 2014-08-07
             return itemsByEventName;
         }
 
@@ -129,7 +129,7 @@ namespace DnaDunlopBarcodeWeb.Controllers.Rest
         {
             var item = items
                     .Where(i => string.Format("{0}", i.DataName).Trim().ToLower() == string.Format("{0}", dataName).Trim().ToLower())
-                    .OrderBy(i => i.EventSearchResultId)
+                    .OrderByDescending(i => i.EventSearchResultId) //switched to orderByDescending on 2014-08-07
                     .FirstOrDefault();
 
             if (item != null)

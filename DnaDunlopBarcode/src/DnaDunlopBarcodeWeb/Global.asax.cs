@@ -24,8 +24,8 @@ namespace DnaDunlopBarcodeWeb
         {
             //MvcApplication.TestDb = new TestDb();
 
-            Environment.SetEnvironmentVariable("PATH", @"C:\ORACLE\Oracle11XCopy32bit;C:\ORACLE\Oracle11XCopy32bit\ODP.NET4\BIN;C:\ORACLE\Oracle11XCopy32bit\odp.net4\odp.net\bin\4;", EnvironmentVariableTarget.Process);
-            Environment.SetEnvironmentVariable("ORACLE_HOME", @"C:\ORACLE\Oracle11XCopy32bit;", EnvironmentVariableTarget.Process);
+            //Environment.SetEnvironmentVariable("PATH", @"C:\ORACLE\Oracle11XCopy32bit;C:\ORACLE\Oracle11XCopy32bit\ODP.NET4\BIN;C:\ORACLE\Oracle11XCopy32bit\odp.net4\odp.net\bin\4;", EnvironmentVariableTarget.Process);
+            //Environment.SetEnvironmentVariable("ORACLE_HOME", @"C:\ORACLE\Oracle11XCopy32bit;", EnvironmentVariableTarget.Process);
 
             AreaRegistration.RegisterAllAreas();
 
